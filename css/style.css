@@ -54,6 +54,19 @@ ul {
   box-sizing: border-box;
 }
 
+/* Navigation container override for logo positioning */
+.top-navbar .container.nav-flex {
+  padding-left: 0 !important;
+}
+
+/* Desktop logo positioning */
+@media (min-width: 769px) {
+  .nav-logo {
+    margin-left: -2rem;
+    padding-left: 2rem;
+  }
+}
+
 /* ============= NAVBAR ============= */
 .top-navbar {
   position: sticky;
@@ -75,7 +88,7 @@ ul {
   justify-content: space-between;
   height: 80px;
   width: 100%;
-  padding: 0 1rem 0 0;
+  padding: 0 2rem 0 0 !important;
 }
 .nav-logo {
   display: flex;
@@ -83,12 +96,12 @@ ul {
   height: 80px;
   flex-shrink: 0;
   margin-left: 0;
-  padding-left: 1rem;
+  padding-left: 0;
 }
 .nav-logo img {
   height: 110px;
   max-width: 350px;
-  margin-right: 0;
+  margin: 0;
   vertical-align: middle;
   display: inline-block;
   object-fit: contain;
