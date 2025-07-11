@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Students | Broad Street M.B. Church</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Broad Street M.B. Church</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 </head>
 <body>
   
@@ -70,13 +73,40 @@
     </div>
   </section>
 
+  
+  
   <footer class="footer">
-    <div class="social-links">
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://youtube.com" target="_blank">YouTube</a>
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3>Location</h3>
+        <p>121 Morris Ave<br>Birmingham, AL 35204</p>
+      </div>
+      <div class="footer-section social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>
+          <a href="mailto:broadstreet121@gmail.com">broadstreet121@gmail.com</a><br>
+          <a href="tel:+12052511372">(205) 251-1372</a>
+        </p>
+      </div>
     </div>
-    <p>&copy; 2025 Broad Street Missionary Baptist Church. All rights reserved.</p>
   </footer>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
+
 </body>
 </html>
