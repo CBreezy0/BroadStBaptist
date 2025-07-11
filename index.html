@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Broad Street M.B. Church</title>
+  <title>Broad Street M.B. Church</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 </head>
 <body>
 
-<!-- CLEAN TOP NAVBAR -->
 <nav class="top-navbar">
   <div class="container nav-flex">
     <div class="nav-logo">
@@ -65,22 +66,63 @@
   </div>
 </nav>
 
-<!-- HERO SECTION -->
-<header class="hero">
-  <div class="hero-text">
-    <h1>Home</h1>
-    <p>Welcome to Broad Street</p>
-  </div>
-</header>
 
-<!-- MAIN CONTENT -->
-<section class="section">
-  <div class="container">
-    <p>This is the home page for Broad Street Missionary Baptist Church. More content will be added here soon.</p>
-  </div>
-</section>
 
-<!-- FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="top-navbar">
+  <div class="container nav-flex">
+    <div class="nav-logo">
+      <a href="index.html"><strong>BROAD STREET</strong> CHURCH</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="messages.html">Messages</a></li>
+      <li><a href="ministries.html">Ministries</a></li>
+      <li><a href="next-steps.html">Next Steps</a></li>
+      <li><a href="give.html">Give</a></li>
+      <li><a href="events.html">Events</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn-cta">Plan Your Visit</a>
+    </div>
+  </div>
+</nav>
+
+
+
+  
+
+
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Home</h1>
+      <p>Welcome to Broad Street</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <p>This is the home page for Broad Street Missionary Baptist Church. More content will be added here soon.</p>
+    </div>
+  </section>
+
+  
+  
+  
 <footer class="footer">
   <div class="container footer-grid">
     <div class="footer-section">
@@ -88,6 +130,7 @@
       <p>121 Morris Ave<br>Birmingham, AL 35204</p>
     </div>
     <div class="footer-section social-icons">
+      <h3>Follow Us</h3>
       <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -102,16 +145,16 @@
   </div>
 </footer>
 
-<!-- MOBILE NAV TOGGLE JS -->
+
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.querySelector(".nav-links");
-    if (toggle && navLinks) {
-      toggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-      });
-    }
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
   });
 </script>
 
