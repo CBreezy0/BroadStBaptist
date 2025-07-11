@@ -780,3 +780,180 @@ h2 {
   color: var(--yellow);
   font-weight: 600;
 }
+
+/* ============= CONTENT SPECIFIC STYLES ============= */
+
+/* Pastor Bio and Church History */
+.pastor-bio h3,
+.pastor-bio h4 {
+  color: var(--purple);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pastor-bio h4 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 0.5rem;
+}
+
+.pastor-greeting {
+  background: var(--gray);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.signature {
+  font-style: italic;
+  text-align: right;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--purple), #220d29);
+  color: var(--white);
+  border-radius: 12px;
+}
+
+.cta-section h3 {
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+.cta-section .btn {
+  margin: 0.5rem;
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* Scripture and quotes */
+.scripture-verse,
+.closing-verse {
+  text-align: center;
+  background: var(--gray);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+.history-content h3 {
+  color: var(--purple);
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.history-video {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--gray);
+  border-radius: 8px;
+}
+
+/* Forms */
+.connection-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--gray);
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--purple);
+  outline: none;
+}
+
+/* Giving page styles */
+.giving-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.give-online {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--purple), #220d29);
+  color: var(--white);
+  border-radius: 12px;
+}
+
+.give-online h3 {
+  color: var(--yellow);
+}
+
+.btn-large {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.other-giving,
+.stewardship-info {
+  background: var(--gray);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.other-giving h3,
+.stewardship-info h3 {
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.giving-scripture {
+  text-align: center;
+  font-style: italic;
+}
+
+.additional-info {
+  background: var(--gray);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.additional-info h3 {
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .pastor-greeting,
+  .connection-form,
+  .cta-section {
+    padding: 1.5rem;
+  }
+  
+  .signature {
+    text-align: center;
+  }
+}
