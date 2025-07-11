@@ -10,6 +10,14 @@
 }
 
 /* ============= BASE ============= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
@@ -17,6 +25,8 @@ body {
   color: var(--black);
   font-size: 18px;
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -40,6 +50,8 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* ============= NAVBAR ============= */
@@ -55,6 +67,7 @@ ul {
   display: flex;
   align-items: center;
   box-shadow: 0 2px 8px rgba(52,22,57,0.03);
+  overflow: hidden;
 }
 .nav-flex {
   display: flex;
@@ -62,17 +75,19 @@ ul {
   justify-content: space-between;
   height: 80px;
   gap: 1rem;
+  width: 100%;
 }
 .nav-logo {
   display: flex;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: auto;
   height: 80px;
+  flex-shrink: 0;
 }
 .nav-logo img {
   height: 110px;
   max-width: 350px;
-  margin-right: 1.2rem;
+  margin-right: 0;
   vertical-align: middle;
   display: inline-block;
   object-fit: contain;
@@ -332,21 +347,26 @@ ul {
 /* Mobile */
 @media (max-width: 768px) {
   .top-navbar {
-    min-height: 80px;
-    height: 80px;
+    min-height: 90px;
+    height: 90px;
     padding: 0 1rem;
+    overflow: visible;
   }
   .nav-flex {
-    height: 80px;
+    height: 90px;
+    width: 100%;
+    max-width: 100%;
   }
   .nav-logo {
-    height: 80px;
+    height: 90px;
     margin-right: 0;
+    flex: 1;
   }
   .nav-logo img {
-    height: 70px;
-    max-width: 180px;
+    height: 85px;
+    max-width: calc(100vw - 80px);
     margin-right: 0;
+    width: auto;
   }
   .menu-toggle {
     position: absolute;
@@ -354,6 +374,7 @@ ul {
     top: 50%;
     transform: translateY(-50%);
     padding: 0.5rem;
+    flex-shrink: 0;
   }
   .top-navbar .nav-links {
     display: none;
@@ -400,18 +421,40 @@ ul {
     padding: 0 1rem;
   }
   .nav-logo img {
-    height: 60px;
-    max-width: 150px;
+    height: 75px;
+    max-width: calc(100vw - 70px);
   }
   .top-navbar {
-    min-height: 75px;
-    height: 75px;
+    min-height: 85px;
+    height: 85px;
   }
   .nav-flex {
-    height: 75px;
+    height: 85px;
   }
   .nav-logo {
-    height: 75px;
+    height: 85px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 375px) {
+  .nav-logo img {
+    height: 70px;
+    max-width: calc(100vw - 60px);
+  }
+  .top-navbar {
+    min-height: 80px;
+    height: 80px;
+    padding: 0 0.5rem;
+  }
+  .nav-flex {
+    height: 80px;
+  }
+  .nav-logo {
+    height: 80px;
+  }
+  .menu-toggle {
+    right: 0.5rem;
   }
 }
 
@@ -587,63 +630,75 @@ h2 {
 /* ============= FOOTER MOBILE RESPONSIVE ============= */
 @media (max-width: 768px) {
   .footer {
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
     border-radius: 12px 12px 0 0;
   }
   
   .footer-grid {
-    flex-direction: column;
-    gap: 1.5rem;
+    display: block;
     text-align: center;
+    max-width: 100%;
   }
   
   .footer-section {
-    flex: none;
-    min-width: unset;
-    max-width: unset;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+  }
+  
+  .footer-section:last-child {
     margin-bottom: 0;
   }
   
-  /* Reset order and alignment for mobile */
+  /* Reset all desktop ordering and alignment */
   .footer-section:first-child,
   .footer-section.social-icons,
   .footer-section.footer-contact {
-    order: unset;
+    order: 0;
     text-align: center;
   }
   
   .footer-section h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--yellow);
+  }
+  
+  .footer-section p {
+    margin-bottom: 0.5rem;
   }
   
   .social-icons {
-    margin-top: 0.5rem;
-    font-size: 1.4rem;
-    gap: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    gap: 2rem;
+    justify-content: center;
   }
 }
 
 @media (max-width: 500px) {
   .footer {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
   }
   
-  .footer-grid {
-    gap: 1.25rem;
+  .footer-section {
+    margin-bottom: 1.5rem;
   }
   
   .footer-section h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
   }
   
   .footer {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   
   .social-icons {
-    font-size: 1.3rem;
-    gap: 1.2rem;
+    font-size: 1.5rem;
+    gap: 1.8rem;
   }
 }
 
