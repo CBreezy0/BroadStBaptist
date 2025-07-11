@@ -2,11 +2,11 @@
 <nav class="top-navbar">
   <div class="container nav-flex">
     <div class="nav-logo">
-  <a href="index.html">
-    <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" style="height:56px;">
-  </a>
-</div>
-    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo">
+      </a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
@@ -63,7 +63,8 @@
     const navLinks = document.querySelector(".nav-links");
     if (toggle && navLinks) {
       toggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
+        const expanded = navLinks.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", expanded);
       });
     }
   });
