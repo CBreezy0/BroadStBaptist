@@ -241,9 +241,9 @@ h2 {
 .footer-grid {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* <-- ensures equal vertical alignment */
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
@@ -252,14 +252,16 @@ h2 {
 .footer-section {
   flex: 1 1 300px;
   min-width: 250px;
-  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .footer-section h3 {
   margin-bottom: 1rem;
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--white);
 }
 
 .footer a {
@@ -275,8 +277,7 @@ h2 {
 .social-icons {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 1.5rem;
   font-size: 1.8rem;
-  margin-top: 1rem;
+  margin-top: auto; /* push icons to align with bottom */
 }
