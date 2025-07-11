@@ -1,29 +1,160 @@
-/* Desktop logo big */
-.nav-logo img {
-  height: 100px;
-  max-width: 300px;
-  margin-right: 1.2rem;
-  vertical-align: middle;
-  display: inline-block;
-  object-fit: contain;
+:root {
+  --purple: #341639;
+  --yellow: #ffc62f;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #f5f5f5;
 }
 
-/* Desktop nav stays as is */
+body {
+  margin: 0;
+  font-family: 'DM Sans', Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* --- NAVBAR --- */
+.top-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+  border-bottom: 1px solid #eee;
+  z-index: 999;
+  padding: 0;
+  min-height: 110px;
+  box-shadow: 0 2px 8px rgba(52,22,57,0.03);
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+}
+
 .nav-logo {
   display: flex;
   align-items: center;
   height: 110px;
 }
 
-/* Desktop navbar */
-.top-navbar,
-.nav-flex {
-  height: 110px;
-  min-height: 110px;
-  align-items: center;
+.nav-logo img {
+  height: 100px;
+  max-width: 300px;
+  margin-right: 1.2rem;
+  object-fit: contain;
+  display: inline-block;
 }
 
-/* MOBILE: Only logo and hamburger, logo top, hamburger right */
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+  margin-left: 0;
+}
+
+.nav-links a {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.5rem 0;
+  transition: color 0.18s;
+  letter-spacing: 0.01em;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--yellow);
+  background-color: var(--gray);
+}
+
+/* CTA */
+.nav-cta {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  height: 110px;
+}
+
+.btn-cta {
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(52,22,57,0.06);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: #e0b200;
+  color: var(--white);
+}
+
+/* Dropdowns */
+.dropdown {
+  position: relative;
+}
+.dropdown > a:after {
+  content: ' ▼';
+  font-size: 0.8em;
+  padding-left: 2px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: var(--white);
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(52,22,57,0.10);
+  padding: 0;
+  margin: 0;
+  border-radius: 7px;
+  z-index: 999;
+  left: 0;
+  top: 100%;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 0.85rem 1rem;
+  color: var(--purple);
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 7px;
+}
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 2.4rem;
+  background: none;
+  border: none;
+  color: var(--purple);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* --- MOBILE NAV --- */
 @media (max-width: 768px) {
   .top-navbar {
     min-height: 70px;
@@ -57,9 +188,11 @@
     max-width: 160px;
     margin: 0;
   }
+
   .nav-cta {
     display: none;
   }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -76,17 +209,40 @@
     display: flex;
   }
 
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    min-width: unset;
+    box-shadow: none;
+    background: var(--gray);
+    border-radius: 0;
+  }
+  .dropdown > a:after {
+    display: none;
+  }
+
   .menu-toggle {
     display: block;
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2.4rem;
-    background: none;
-    border: none;
-    color: var(--purple);
-    cursor: pointer;
-    z-index: 1000;
+  }
+}
+
+/* --- SMALLER LOGO FOR VERY SMALL SCREENS --- */
+@media (max-width: 500px) {
+  .nav-logo img {
+    height: 40px;
+    max-width: 100px;
   }
 }
