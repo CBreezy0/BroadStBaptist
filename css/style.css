@@ -270,8 +270,8 @@ ul {
     padding: 0 1rem;
   }
   .nav-logo img {
-    height: 40px;
-    max-width: 90px;
+    height: 48px;     /* Larger for easier branding */
+    max-width: 120px; /* Larger for visibility */
   }
 }
 
