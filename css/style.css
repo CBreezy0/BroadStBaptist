@@ -271,6 +271,9 @@ h2 {
 
 .social-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   font-size: 1.4rem;
+  margin-top: 0.5rem;
 }
