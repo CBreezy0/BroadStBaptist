@@ -8,38 +8,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <div id="site-nav"></div>
 
-<div id="site-nav"></div>
+  <header class="hero">
+    <div class="hero-text">
+      <h1><span class="header-subtle">BROAD STREET</span> <span class="kids-bold">KIDS</span></h1>
+      <p class="hero-subtagline">A place where <span class="highlight">Kids</span> want to be</p>
+    </div>
+  </header>
 
-<header class="hero">
-  <div class="hero-text">
-    <h1><span class="header-subtle">BROAD STREET</span> <span class="kids-bold">KIDS</span></h1>
-    <p class="hero-subtagline">A place where <span class="highlight">Kids</span> want to be</p>
-  </div>
-</header>
+  <section class="section">
+    <div class="container">
+      <h2>Welcome to Broad Street Kids</h2>
+      <p>This ministry is a place where children grow in faith and have fun learning about God's love.</p>
+    </div>
+  </section>
 
-<section class="section">
-  <div class="container">
-    <h2>Welcome to Broad Street Kids</h2>
-    <p>This ministry is a place where children grow in faith and have fun learning about God's love.</p>
-  </div>
-</section>
-
-<div id="site-footer"></div>
-
-<script>
-  fetch('partials/nav.html')
-    .then((res) => res.text())
-    .then((html) => {
-      document.getElementById('site-nav').innerHTML = html;
-    });
-
-  fetch('partials/footer.html')
-    .then((res) => res.text())
-    .then((html) => {
-      document.getElementById('site-footer').innerHTML = html;
-    });
-</script>
-
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
 </body>
 </html>

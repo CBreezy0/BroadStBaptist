@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Broad Street M.B. Church</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <!-- NAV PLACEHOLDER -->
   <div id="site-nav"></div>
 
-  <!-- HERO SECTION -->
   <header class="hero">
     <div class="hero-text">
       <h1>Home</h1>
@@ -22,34 +17,13 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <section class="section">
     <div class="container">
-      <p>
-        This is the home page for Broad Street Missionary Baptist Church. More
-        content will be added here soon.
-      </p>
+      <p>This is the home page for Broad Street Missionary Baptist Church. More content will be added here soon.</p>
     </div>
   </section>
 
-  <!-- FOOTER PLACEHOLDER -->
   <div id="site-footer"></div>
-
-  <!-- SHARED INCLUDE SCRIPTS -->
-  <script>
-    // load nav (relative path)
-    fetch('partials/nav.html')
-      .then((res) => res.text())
-      .then((html) => {
-        document.getElementById('site-nav').innerHTML = html;
-      });
-
-    // load footer
-    fetch('partials/footer.html')
-      .then((res) => res.text())
-      .then((html) => {
-        document.getElementById('site-footer').innerHTML = html;
-      });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
