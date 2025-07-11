@@ -241,7 +241,7 @@ h2 {
 .footer-grid {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch; /* <-- ensures equal vertical alignment */
   flex-wrap: wrap;
   gap: 3rem;
   text-align: left;
