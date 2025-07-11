@@ -204,3 +204,118 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+
+/* White header bar */
+.white-nav {
+  background-color: var(--white);
+  color: var(--black);
+  border-bottom: 1px solid #eee;
+}
+
+.logo-dark {
+  color: var(--purple);
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.hero-kids {
+  background: url('../assets/images/kids-hero.jpg') no-repeat center center;
+  background-size: cover;
+  color: var(--white);
+  text-align: center;
+  padding: 8rem 2rem 5rem;
+  position: relative;
+}
+
+.hero-kids .hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-kids h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header-subtle {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+.kids-bold {
+  font-size: 4rem;
+  color: var(--yellow);
+  text-shadow: 2px 2px var(--black);
+}
+
+.hero-subtagline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.hero-subtagline .highlight {
+  background-color: var(--white);
+  color: var(--purple);
+  padding: 0 0.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+
+/* Top nav with Broad Street color palette */
+.top-navbar {
+  background-color: var(--white);
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  font-size: 1rem;
+  z-index: 999;
+  position: relative;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-logo a {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--purple);
+  text-transform: uppercase;
+}
+
+.top-navbar .nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.top-navbar .nav-links a {
+  color: var(--purple);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.top-navbar .nav-links a:hover {
+  color: var(--yellow);
+}
+
+.nav-cta .btn-cta {
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.nav-cta .btn-cta:hover {
+  background-color: #e0b200;
+  color: var(--white);
+}
