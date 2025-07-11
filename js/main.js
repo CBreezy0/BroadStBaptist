@@ -50,8 +50,11 @@ function renderMobileMenu(menu, submenu = null) {
     menu.forEach(link => {
       const li = document.createElement('li');
       if (link.submenu) {
-        li.innerHTML = `<button><span>${link.text}</span> <span class="submenu-arrow">&#8250;</span></button>`;
-        li.querySelector('button').onclick = () => renderMobileMenu(menu, link.submenu);
+        li.innerHTML = `<a href="#" class="mobile-nav-submenu"><span>${link.text}</span> <span class="submenu-arrow">&#8250;</span></a>`;
+        li.querySelector('a').onclick = (e) => {
+          e.preventDefault();
+          renderMobileMenu(menu, link.submenu);
+        };
       } else {
         li.innerHTML = `<a href="${link.url}">${link.text}</a>`;
       }

@@ -72,9 +72,8 @@ ul {
 .nav-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 80px;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
 }
 .nav-logo {
@@ -94,17 +93,16 @@ ul {
 .top-navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex: 1;
-  justify-content: center;
-  margin: 0 2rem;
+  gap: 1.5rem;
+  margin-left: auto;
+  margin-right: 1rem;
 }
 .top-navbar .nav-links a,
 .top-navbar .nav-links .dropdown > a {
   color: var(--purple);
   font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
   transition: color 0.18s;
   letter-spacing: 0.003em;
   border-radius: 6px;
@@ -128,10 +126,10 @@ ul {
 .nav-cta .btn-cta {
   background-color: var(--yellow);
   color: var(--black);
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.3rem;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-decoration: none;
   border: none;
   display: inline-block;
@@ -237,9 +235,6 @@ ul {
 .menu-toggle .menu-icon:before {
   top: 0;
 }
-.menu-toggle .menu-icon {
-  top: 6px;
-}
 .menu-toggle .menu-icon:after {
   top: 12px;
 }
@@ -302,6 +297,17 @@ ul {
   background: none;
   border: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.mobile-nav-list a.mobile-nav-submenu,
+.mobile-nav-list a {
+  font-size: 2.1rem;
+  color: var(--purple);
+  font-weight: 400;
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
