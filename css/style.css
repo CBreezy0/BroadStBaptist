@@ -281,3 +281,14 @@ h2 {
   font-size: 1.8rem;
   margin-top: 1rem;
 }
+
+/* 1. Pin the three columns L–C–R */
+.footer-section:first-child    { order: 0; } /* Location */
+.footer-section.social-icons   { order: 1; } /* Social center */
+.footer-section.footer-contact { order: 2; } /* Contact */
+
+/* 2. Left-center-right text alignment */
+.footer-section.social-icons   { text-align: center; }
+.footer-section.footer-contact { text-align: right; }
+
+/* (Location stays left by default) */
