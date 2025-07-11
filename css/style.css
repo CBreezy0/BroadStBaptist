@@ -96,14 +96,20 @@ h2 {
   background-color: var(--white);
   border-bottom: 1px solid #eee;
   z-index: 999;
-  padding: 1.25rem 0;
+  padding: 0.75rem 0; /* Reduced vertical padding for a compact navbar */
 }
 
 .nav-flex {
   display: flex;
+  align-items: center; /* Vertically center logo and nav */
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+}
+
+.nav-logo {
+  margin-right: 2rem; /* Space between logo and nav links */
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo a {
@@ -112,12 +118,21 @@ h2 {
   color: var(--purple);
   text-transform: uppercase;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 56px; /* Large logo size to match reference */
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .top-navbar .nav-links {
   display: flex;
-  gap: 1.25rem;
+  gap: 2rem;
   align-items: center;
+  flex: 1;
 }
 
 .top-navbar .nav-links a {
@@ -134,15 +149,21 @@ h2 {
 }
 
 /* Call-to-action Button */
+.nav-cta {
+  margin-left: 2rem;
+}
+
 .nav-cta .btn-cta {
   background-color: var(--yellow);
   color: var(--black);
-  padding: 0.6rem 1.4rem;
-  border-radius: 5px;
+  padding: 1rem 2.4rem;
+  border-radius: 12px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: background 0.3s ease;
+  border: none;
+  display: inline-block;
 }
 
 .nav-cta .btn-cta:hover {
@@ -165,6 +186,8 @@ h2 {
   margin: 0;
   border-radius: 5px;
   z-index: 999;
+  left: 0;
+  top: 100%;
 }
 
 .top-navbar .dropdown:hover .dropdown-menu {
@@ -199,6 +222,19 @@ h2 {
 }
 
 /* Mobile Styles */
+@media (max-width: 900px) {
+  .top-navbar .nav-links {
+    gap: 1rem;
+  }
+  .nav-logo img {
+    height: 44px;
+  }
+  .nav-cta .btn-cta {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -214,10 +250,11 @@ h2 {
     top: 100%;
     left: 0;
     border-top: 1px solid #eee;
+    gap: 0;
   }
 
   .top-navbar .nav-links.active {
-    display
+    display: flex;
   }
 
   .nav-cta {
@@ -228,7 +265,17 @@ h2 {
     padding: 0.5rem 1rem;
     text-align: center;
   }
+  .nav-logo img {
+    height: 40px;
+  }
 }
+
+@media (max-width: 500px) {
+  .nav-logo img {
+    height: 32px;
+  }
+}
+
 /* ============= FOOTER ============= */
 .footer {
   background-color: var(--purple);
