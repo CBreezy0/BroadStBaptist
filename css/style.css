@@ -464,3 +464,23 @@ h2 {
     text-align: center;
   }
 }
+
+
+/* Enlarged top navbar for better visibility */
+.top-navbar {
+  padding: 1.25rem 0;
+}
+
+.nav-logo a {
+  font-size: 1.8rem;
+}
+
+.nav-links a {
+  font-size: 1.1rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-cta .btn-cta {
+  font-size: 1rem;
+  padding: 0.6rem 1.4rem;
+}
