@@ -1,3 +1,4 @@
+
 :root {
   --purple: #341639;
   --yellow: #ffc62f;
@@ -187,7 +188,7 @@ h2 {
   color: var(--yellow);
 }
 
-/* Contact Form */
+/* Contact form styles */
 .contact-form {
   display: flex;
   flex-direction: column;
