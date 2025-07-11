@@ -72,8 +72,8 @@ ul {
 .nav-flex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
-  gap: 1rem;
   width: 100%;
 }
 .nav-logo {
@@ -81,6 +81,7 @@ ul {
   align-items: center;
   height: 80px;
   flex-shrink: 0;
+  margin-right: auto;
 }
 .nav-logo img {
   height: 110px;
@@ -94,7 +95,6 @@ ul {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-left: auto;
   margin-right: 1rem;
 }
 .top-navbar .nav-links a,
