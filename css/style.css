@@ -484,37 +484,3 @@ h2 {
   font-size: 1rem;
   padding: 0.6rem 1.4rem;
 }
-
-
-.footer-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  text-align: left;
-}
-
-.footer-section {
-  flex: 1 1 250px;
-  min-width: 200px;
-}
-
-.footer-section h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  color: var(--white);
-}
-
-.footer a {
-  color: var(--white);
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: var(--yellow);
-}
-
-.social-icons a {
-  margin-right: 0.75rem;
-  font-size: 1.2rem;
-}
