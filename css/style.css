@@ -251,11 +251,10 @@ h2 {
 
 
 .footer-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 350px;
 }
-
 
 .footer-section h3 {
   margin-bottom: 1rem;
