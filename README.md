@@ -1,22 +1,46 @@
-# Broad Street Missionary Baptist Church – Website Mockup
+# ✝️ Broad Street Missionary Baptist Church – Website Mockup
 
-> ✝️ This is a development mockup of the future website for Broad Street M.B. Church.  
-> 📍 Not final – content, layout, and design are subject to change.  
-> 🔗 Preview: [https://cbreezy0.github.io/BroadStBaptist/](https://cbreezy0.github.io/BroadStBaptist/)
+![Broad Street Missionary Baptist Church logo](assets/logo.png)
 
----
-
-## 📁 Project Overview
-
-This repository contains a **static HTML/CSS mockup** of the new church website. The purpose of this mockup is to explore layout, structure, and navigation before final content and design are implemented.
+Welcome to the future home of Broad Street Missionary Baptist Church online!  
+This repository is a **visual mockup** of our next-generation website, designed to help our church family and visitors connect, grow, and stay informed.
 
 ---
 
-## 🗂 Sections Included
+## 🌟 Live Preview
 
-Each major tab and submenu item is represented with its own standalone HTML page for clarity and previewing.
+> [cbreezy0.github.io/BroadStBaptist/](https://cbreezy0.github.io/BroadStBaptist/)
 
-### 🔹 Top Navigation Structure
+---
+
+## 🏗️ What’s Inside?
+
+A fully responsive, accessible static site built with HTML & CSS (and a sprinkle of JS for navigation).  
+Explore each page to get a feel for our upcoming web presence!
+
+```
+📂 BroadStBaptist/
+├── index.html
+├── css/
+│   └── style.css
+├── partials/
+│   ├── nav.html
+│   └── footer.html
+├── assets/
+│   └── logo.png
+├── about.html
+├── ministries.html
+├── resources.html
+├── next-steps.html
+├── give.html
+├── events.html
+├── messages.html
+└── ... (and other section pages)
+```
+
+---
+
+## 🧭 Navigation Structure
 
 - **Home**
 - **About**
@@ -25,69 +49,69 @@ Each major tab and submenu item is represented with its own standalone HTML page
   - Careers
   - Contact
 - **Ministries**
-  - Kids
-  - Students
-  - Young Adults
-  - Adults Plus
-  - Worship
+  - Kids, Students, Young Adults, Adults Plus, Worship
 - **Resources**
-  - Ministry Hub
-  - Midweek Devotion
-  - See Feel Act
-  - 40 Days of Prayer
-  - Connection Card
-  - The Weekly
+  - Ministry Hub, Midweek Devotion, See Feel Act, 40 Days of Prayer, Connection Card, The Weekly
 - **Next Steps**
-  - Discover
-  - Baptism
-  - Groups
-  - Serve Teams
+  - Discover, Baptism, Groups, Serve Teams
 - **Give**
 - **Events**
 
 ---
 
-## 🎨 Design Details
+## 🎨 Design Features
 
-- **Color Scheme**:  
-  - Purple `#341639`  
-  - Yellow `#ffc62f`  
-  - Black and White as secondary accents
-
-- **Navigation**:  
-  - Responsive layout with pure CSS-based dropdown menus  
-  - Desktop hover support (mobile tap coming soon)
-
-- **Fonts**:  
-  - Google Font: *DM Sans*
-
----
-
-## 🚧 Status
-
-This is a **mockup only** and does not represent the final published website.  
-All content is placeholder text, and pages are layout previews only.
+- **Color Palette:**  
+  Purple `#341639`, Yellow `#ffc62f`, Black & White accents
+- **Typography:**  
+  [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+- **Navigation:**  
+  - Desktop: dropdown menus  
+  - Mobile: hamburger menu
+- **Accessibility:**  
+  - Keyboard-friendly  
+  - Focus highlights  
+  - Alt text on images
+- **Modern touches:**  
+  - Soft shadows  
+  - Rounded corners  
+  - Clean spacing
 
 ---
 
-## 📌 Deployment (GitHub Pages)
+## 💻 How to Use This Mockup
 
-This mockup is deployed via GitHub Pages:  
-➡️ [https://cbreezy0.github.io/BroadStBaptist/](https://cbreezy0.github.io/BroadStBaptist/)
+1. **Clone or fork the repo**
+2. Open `index.html` (or any other page) in your browser
+3. Edit content in the HTML/CSS files as needed
+4. Commit and push changes to update the live preview via GitHub Pages
 
-To update the mockup:
-- Edit files locally
-- Push changes to the main branch
-- GitHub Pages will automatically refresh the preview
+---
+
+## 🚦 Status
+
+> **This is a mockup!**  
+> Content is placeholder, and not a final published website.  
+> No backend/database, just static files for layout and design preview.
 
 ---
 
 ## 🧑‍💻 Maintainer
 
-This project is managed by **Chris** for Broad Street Missionary Baptist Church.  
-Please do not share or reuse without permission.
+Made with ❤️ by **Chris**  
+For Broad Street Missionary Baptist Church  
+Questions? Reach out via [Contact](contact.html)
+
+---
+
+## 📖 License
+
+For internal church use only.  
+Please do not distribute or reuse without permission.
 
 ---
 
 > _“Unless the Lord builds the house, the builders labor in vain.”_  
 > — **Psalm 127:1**
+
+---
