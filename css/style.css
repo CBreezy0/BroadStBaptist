@@ -392,6 +392,17 @@ h2 {
   color: var(--white);
 }
 
+.footer-section.footer-contact a {
+  color: var(--white);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-section.footer-contact a:focus,
+.footer-section.footer-contact a:hover {
+  color: var(--yellow);
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
