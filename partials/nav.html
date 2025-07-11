@@ -1,4 +1,5 @@
-<!-- CLEAN TOP NAVBAR -->
+<!-- CLEAN TOP NAVBAR with MOBILE OVERLAY MENU -->
+
 <nav class="top-navbar">
   <div class="container nav-flex">
     <div class="nav-logo">
@@ -6,7 +7,9 @@
         <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo">
       </a>
     </div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="menu-icon"></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
@@ -55,17 +58,19 @@
       <a href="messages.html" class="btn-cta">Watch</a>
     </div>
   </div>
-</nav>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    if (toggle && navLinks) {
-      toggle.addEventListener("click", function () {
-        const expanded = navLinks.classList.toggle("active");
-        toggle.setAttribute("aria-expanded", expanded);
-      });
-    }
-  });
-</script>
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo">
+        </a>
+      </div>
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list" id="mobile-nav-list">
+      <!-- Populated by JS for main menu or submenu -->
+    </ul>
+  </div>
+</nav>
