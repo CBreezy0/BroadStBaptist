@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
 :root {
   --purple: #341639;
   --yellow: #ffc62f;
@@ -595,3 +597,25 @@ h2 {
 .pb-2 { padding-bottom: 2rem; }
 .rounded { border-radius: 12px; }
 .shadow { box-shadow: 0 2px 8px rgba(52,22,57,0.08); }
+
+/* ============= KIDS PAGE SPECIFIC STYLES ============= */
+.header-subtle {
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.kids-bold {
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.hero-subtagline {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.highlight {
+  color: var(--yellow);
+  font-weight: 600;
+}

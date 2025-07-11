@@ -64,8 +64,30 @@ function renderMobileMenu(menu, submenu = null) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Hamburger menu
+// Function to load HTML partials
+async function loadPartial(elementId, filePath) {
+  try {
+    const response = await fetch(filePath);
+    if (response.ok) {
+      const html = await response.text();
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.innerHTML = html;
+      }
+    } else {
+      console.error(`Failed to load ${filePath}: ${response.status}`);
+    }
+  } catch (error) {
+    console.error(`Error loading ${filePath}:`, error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+  // Load navigation and footer partials
+  await loadPartial('site-nav', 'partials/nav.html');
+  await loadPartial('site-footer', 'partials/footer.html');
+
+  // Initialize hamburger menu functionality after nav is loaded
   const menuToggle = document.getElementById("menu-toggle");
   const mobileNav = document.getElementById("mobile-nav-overlay");
   const mobileNavClose = document.getElementById("mobile-nav-close");
