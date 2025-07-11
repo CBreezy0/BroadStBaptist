@@ -241,15 +241,17 @@ h2 {
 
 .footer-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 2rem;
+  text-align: left;
 }
 
 .footer-section {
-  max-width: 500px;
-  width: 100%;
+  flex: 1 1 250px;
+  min-width: 200px;
+  max-width: 300px;
 }
 
 .footer-section h3 {
@@ -269,7 +271,6 @@ h2 {
 
 .social-icons {
   display: flex;
-  justify-content: center;
   gap: 1rem;
   font-size: 1.4rem;
 }
