@@ -54,22 +54,20 @@ ul {
   align-items: center;
   box-shadow: 0 2px 8px rgba(52,22,57,0.03);
 }
-
 .nav-flex {
   display: flex;
   align-items: center;
+  /* The next line pushes .nav-cta to the far right */
   justify-content: space-between;
   height: 80px;
   gap: 1rem;
 }
-
 .nav-logo {
   display: flex;
   align-items: center;
   margin-right: 2rem;
   height: 80px;
 }
-
 .nav-logo img {
   height: 110px;
   max-width: 350px;
@@ -78,44 +76,39 @@ ul {
   display: inline-block;
   object-fit: contain;
 }
-
 .top-navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem; /* smaller gap */
   flex: 1;
   margin-left: 0;
 }
-
 .top-navbar .nav-links a {
   color: var(--purple);
-  font-weight: 700;
-  font-size: 1.15rem;
-  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 1rem; /* smaller font */
+  padding: 0.3rem 0.4rem; /* less padding */
   transition: color 0.18s;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.005em;
   border-radius: 6px;
 }
-
 .top-navbar .nav-links a:focus,
 .top-navbar .nav-links a:hover {
   color: var(--yellow);
   background-color: var(--gray);
 }
-
 .nav-cta {
-  margin-left: 2rem;
+  margin-left: auto; /* push button to right */
   display: flex;
   align-items: center;
   height: 80px;
 }
-
 .nav-cta .btn-cta {
   background-color: var(--yellow);
   color: var(--black);
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
   border: none;
@@ -124,7 +117,6 @@ ul {
   transition: background 0.2s, color 0.2s;
   cursor: pointer;
 }
-
 .nav-cta .btn-cta:focus,
 .nav-cta .btn-cta:hover {
   background-color: #e0b200;
