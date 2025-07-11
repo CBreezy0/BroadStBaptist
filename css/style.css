@@ -97,15 +97,15 @@ ul {
 .nav-cta .btn-cta {
   background-color: var(--yellow);
   color: var(--black);
-  padding: 1.1rem 2.8rem;
-  border-radius: 16px;
-  font-weight: bold;
-  font-size: 1.25rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
   text-decoration: none;
   transition: background 0.3s ease;
   border: none;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
 .nav-cta .btn-cta:hover {
