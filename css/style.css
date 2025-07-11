@@ -218,3 +218,58 @@ h2 {
 
   .top-navbar .nav-links.active {
     display
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .top-navbar .nav-links a {
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+}
+/* ============= FOOTER ============= */
+.footer {
+  background-color: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.95rem;
+  clear: both;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.footer-section {
+  max-width: 500px;
+  width: 100%;
+}
+
+.footer-section h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--yellow);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
