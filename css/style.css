@@ -67,7 +67,7 @@ ul {
   display: flex;
   align-items: center;
   box-shadow: 0 2px 8px rgba(52,22,57,0.03);
-  overflow: hidden;
+  overflow: visible;
 }
 .nav-flex {
   display: flex;
@@ -171,9 +171,10 @@ ul {
   padding: 0;
   margin: 0;
   border-radius: 7px;
-  z-index: 999;
+  z-index: 9999;
   left: 0;
   top: 100%;
+  border: 1px solid rgba(52,22,57,0.1);
 }
 .top-navbar .dropdown:focus-within .dropdown-menu,
 .top-navbar .dropdown:hover .dropdown-menu {
