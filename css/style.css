@@ -62,7 +62,7 @@ ul {
   background-color: var(--white);
   border-bottom: 1px solid #eee;
   z-index: 999;
-  padding: 0 1rem;
+  padding: 0;
   min-height: 80px;
   display: flex;
   align-items: center;
@@ -75,13 +75,15 @@ ul {
   justify-content: space-between;
   height: 80px;
   width: 100%;
+  padding: 0 1rem 0 0;
 }
 .nav-logo {
   display: flex;
   align-items: center;
   height: 80px;
   flex-shrink: 0;
-  margin-right: auto;
+  margin-left: 0;
+  padding-left: 1rem;
 }
 .nav-logo img {
   height: 110px;
