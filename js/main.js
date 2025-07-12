@@ -15,11 +15,15 @@ const navLinksData = [
   ]},
   { text: 'Messages', url: 'messages.html' },
   { text: 'Ministries', submenu: [
-    { text: 'Kids', url: 'kids.html' },
-    { text: 'Students', url: 'students.html' },
-    { text: 'Young Adults', url: 'young-adults.html' },
-    { text: 'Adults Plus', url: 'adults-plus.html' },
-    { text: 'Worship', url: 'worship.html' }
+    { text: 'All Ministries', url: 'ministries.html' },
+    { text: 'Children\'s Ministry', url: 'kids.html' },
+    { text: 'Student Ministry', url: 'students.html' },
+    { text: 'Men\'s Ministry', url: 'ministries.html#mens-ministry' },
+    { text: 'Women\'s Ministry', url: 'ministries.html#womens-ministry' },
+    { text: 'Worship Ministry', url: 'worship.html' },
+    { text: 'Care Ministry', url: 'ministries.html#care-ministry' },
+    { text: 'Media & Technology', url: 'ministries.html#media-tech-ministry' },
+    { text: 'Missions & Outreach', url: 'ministries.html#missions-ministry' }
   ]},
   { text: 'Next Steps', submenu: [
     { text: 'Discover', url: 'discover.html' },

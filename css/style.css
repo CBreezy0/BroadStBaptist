@@ -961,14 +961,155 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* ============= MINISTRY PAGE STYLES ============= */
+
+/* Ministry grid layout */
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.ministry-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(52,22,57,0.08);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ministry-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(52,22,57,0.12);
+}
+
+.ministry-card h3 {
+  color: var(--purple);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.ministry-card p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.ministry-card blockquote {
+  background: var(--gray);
+  padding: 1rem;
+  border-left: 4px solid var(--yellow);
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.ministry-card blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.ministry-card cite {
+  font-size: 0.9rem;
+  color: var(--purple);
+  font-weight: 600;
+}
+
+/* Ministry details styling */
+.ministry-details {
+  margin-top: 2rem;
+}
+
+.ministry-details h3 {
+  color: var(--purple);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 0.5rem;
+}
+
+.ministry-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ministry-details li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.ministry-details li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+/* Get Involved section */
+.get-involved-section {
+  margin-top: 4rem;
+  padding: 3rem;
+  background: var(--gray);
+  border-radius: 12px;
+}
+
+.get-involved-section h2 {
+  color: var(--purple);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.ministry-contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.ministry-signup-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.ministry-signup-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.ministry-signup-form input,
+.ministry-signup-form select,
+.ministry-signup-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.ministry-signup-form input:focus,
+.ministry-signup-form select:focus,
+.ministry-signup-form textarea:focus {
+  border-color: var(--purple);
+  outline: none;
+}
+
+.ministry-signup-form textarea {
+  resize: vertical;
+}
+
 @media (max-width: 768px) {
-  .pastor-greeting,
-  .connection-form,
-  .cta-section {
+  .ministries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ministry-card {
     padding: 1.5rem;
   }
   
-  .signature {
-    text-align: center;
+  .get-involved-section {
+    padding: 2rem;
   }
 }
