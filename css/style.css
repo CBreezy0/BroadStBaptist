@@ -61,14 +61,6 @@ ul {
   padding-left: 0 !important;
 }
 
-/* Desktop logo positioning */
-@media (min-width: 769px) {
-  .nav-logo {
-    margin-left: -3rem;
-    padding-left: 3rem;
-  }
-}
-
 /* ============= NAVBAR ============= */
 .top-navbar {
   position: sticky;
@@ -87,7 +79,6 @@ ul {
 .nav-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 80px;
   width: 100%;
   padding: 0 2rem 0 0 !important;
@@ -97,8 +88,7 @@ ul {
   align-items: center;
   height: 80px;
   flex-shrink: 0;
-  margin-left: -2rem;
-  padding-left: 2rem;
+  margin-right: auto;
 }
 .nav-logo img {
   height: 110px;
