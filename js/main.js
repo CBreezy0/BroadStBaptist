@@ -5,12 +5,7 @@ const navLinksData = [
     { text: 'Contact', url: 'contact.html' }
   ]},
   { text: 'Resources', submenu: [
-    { text: 'Ministry Hub', url: 'ministry-hub.html' },
-    { text: 'Midweek Devotion', url: 'midweek-devotion.html' },
-    { text: 'See Feel Act', url: 'see-feel-act.html' },
-    { text: '40 Days of Prayer', url: '40-days-of-prayer.html' },
-    { text: 'Connection Card', url: 'connection-card.html' },
-    { text: 'The Weekly', url: 'the-weekly.html' }
+    { text: 'Connection Card', url: 'connection-card.html' }
   ]},
   { text: 'Messages', url: 'messages.html' },
   { text: 'Ministries', submenu: [
