@@ -251,11 +251,11 @@ ul {
   align-items: center;
   height: 100px;
   flex-shrink: 0;
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
 .mobile-logo {
-  display: none;
+  display: none !important;
 }
 
 /* Mobile navbar layout */
@@ -268,11 +268,11 @@ ul {
   }
   
   .desktop-logo {
-    display: none;
+    display: none !important;
   }
   
   .mobile-logo {
-    display: flex;
+    display: flex !important;
     align-items: center;
     height: 70px;
     flex-shrink: 0;
