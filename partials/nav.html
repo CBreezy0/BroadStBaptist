@@ -28,25 +28,15 @@
 <!-- CLEAN TOP NAVBAR with MOBILE OVERLAY MENU -->
 
 <nav class="top-navbar">
-  <!-- Desktop logo outside container -->
-  <div class="nav-logo desktop-logo">
-    <a href="index.html">
-      <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-      <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">Broad Street Baptist</span>
-    </a>
-  </div>
-  
-  <div class="container nav-flex">
-    <!-- Mobile logo inside container -->
-    <div class="nav-logo mobile-logo">
+  <!-- Desktop Navigation -->
+  <div class="desktop-nav">
+    <div class="nav-logo">
       <a href="index.html">
         <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">Broad Street Baptist</span>
       </a>
     </div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
-      <span class="menu-icon"></span>
-    </button>
+    <div class="nav-content">
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li class="dropdown">
@@ -86,7 +76,22 @@
     <div class="nav-cta">
       <a href="messages.html" class="btn-cta">Watch</a>
     </div>
+    </div>
   </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">Broad Street Baptist</span>
+      </a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <span class="menu-icon"></span>
+    </button>
+  </div>
+</nav>
 
   <!-- MOBILE NAV OVERLAY -->
   <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
