@@ -93,15 +93,30 @@ document.addEventListener("DOMContentLoaded", async function () {
     menuToggle.onclick = () => {
       mobileNav.classList.add('active');
       mobileNav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // Prevent body scroll
       renderMobileMenu(navLinksData);
     };
     mobileNavClose.onclick = () => {
       mobileNav.classList.remove('active');
       mobileNav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // Restore body scroll
     };
     // for accessibility, close menu on escape
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') mobileNav.classList.remove('active');
+      if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+        mobileNav.classList.remove('active');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = ''; // Restore body scroll
+      }
+    });
+    
+    // Close menu when clicking outside
+    mobileNav.addEventListener('click', (e) => {
+      if (e.target === mobileNav) {
+        mobileNav.classList.remove('active');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = ''; // Restore body scroll
+      }
     });
   }
 });
