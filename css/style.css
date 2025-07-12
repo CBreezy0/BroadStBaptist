@@ -56,11 +56,6 @@ ul {
   box-sizing: border-box;
 }
 
-/* Navigation container override for logo positioning */
-.top-navbar .container.nav-flex {
-  padding-left: 0 !important;
-}
-
 /* ============= NAVBAR ============= */
 .top-navbar {
   position: sticky;
@@ -76,13 +71,20 @@ ul {
   box-shadow: 0 2px 8px rgba(52,22,57,0.03);
   overflow: visible;
 }
+
+/* Reset container padding once */
+.top-navbar .container {
+  padding-left: 0;
+}
+
 .nav-flex {
   display: flex;
   align-items: center;
   height: 80px;
   width: 100%;
-  padding: 0 2rem 0 0 !important;
+  padding: 0 2rem 0 0;
 }
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -90,6 +92,7 @@ ul {
   flex-shrink: 0;
   margin-right: auto;
 }
+
 .nav-logo img {
   height: 110px;
   max-width: 350px;
