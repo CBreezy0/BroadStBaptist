@@ -242,6 +242,20 @@ ul {
   align-items: center;
   box-shadow: 0 2px 8px rgba(52,22,57,0.03);
   overflow: visible;
+  justify-content: space-between;
+}
+
+/* Desktop logo positioning */
+.desktop-logo {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  flex-shrink: 0;
+  padding-left: 2rem;
+}
+
+.mobile-logo {
+  display: none;
 }
 
 /* Mobile navbar layout */
@@ -249,27 +263,47 @@ ul {
   .top-navbar {
     min-height: 70px;
     padding: 0.5rem 0;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+  }
+  
+  .desktop-logo {
+    display: none;
+  }
+  
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    flex-shrink: 0;
+    padding-left: 0;
   }
 }
 
 /* Reset container padding completely for navbar */
 .top-navbar .container {
   padding: 0 2rem;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /* Mobile navbar container fix */
 @media (max-width: 768px) {
   .top-navbar .container {
     padding: 0 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 .nav-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 100px;
   width: 100%;
   padding: 0;
@@ -280,17 +314,10 @@ ul {
 @media (max-width: 768px) {
   .nav-flex {
     height: 70px;
-    padding: 0 1rem;
+    padding: 0;
     justify-content: space-between;
+    width: 100%;
   }
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  flex-shrink: 0;
-  padding-left: 0;
 }
 
 .nav-logo img {
@@ -304,12 +331,7 @@ ul {
 
 /* Mobile navbar fixes */
 @media (max-width: 768px) {
-  .nav-logo {
-    padding-left: 0;
-    height: 70px;
-  }
-  
-  .nav-logo img {
+  .mobile-logo img {
     height: 60px;
     max-width: 180px;
   }
