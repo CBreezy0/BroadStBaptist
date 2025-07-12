@@ -64,8 +64,8 @@ ul {
 /* Desktop logo positioning */
 @media (min-width: 769px) {
   .nav-logo {
-    margin-left: -2rem;
-    padding-left: 2rem;
+    margin-left: -3rem;
+    padding-left: 3rem;
   }
 }
 
@@ -97,8 +97,8 @@ ul {
   align-items: center;
   height: 80px;
   flex-shrink: 0;
-  margin-left: 0;
-  padding-left: 0;
+  margin-left: -2rem;
+  padding-left: 2rem;
 }
 .nav-logo img {
   height: 110px;
