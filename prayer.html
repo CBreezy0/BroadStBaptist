@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Ministry - Broad Street Baptist Church</title>
+    <meta name="description" content="Submit prayer requests and learn about our prayer ministry at Broad Street Baptist Church. We believe in the power of prayer and community support.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="partials/nav.html" as="fetch">
+    <link rel="preload" href="partials/footer.html" as="fetch">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar"></nav>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Prayer Ministry</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Prayer Ministry</h1>
+            <p class="lead">We believe prayer is the foundation of our faith and community. Join us in lifting up requests, praises, and intercession.</p>
+        </div>
+
+        <div class="ministry-content">
+            <div class="prayer-intro">
+                <h2>The Power of Prayer</h2>
+                <p>At Broad Street Baptist Church, we believe that prayer is not just a religious duty, but a powerful privilege that connects us directly to our Heavenly Father. Through prayer, we find strength, guidance, comfort, and the miraculous touch of God in our daily lives.</p>
+                
+                <div class="scripture-highlight">
+                    <p><em>"And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us: And if we know that he hear us, whatsoever we ask, we know that we have the petitions that we desired of him."</em></p>
+                    <cite>1 John 5:14-15 KJV</cite>
+                </div>
+            </div>
+
+            <div class="prayer-opportunities">
+                <h2>Prayer Opportunities</h2>
+                <div class="prayer-cards">
+                    <div class="prayer-card">
+                        <i class="fas fa-praying-hands"></i>
+                        <h3>Sunday Morning Prayer</h3>
+                        <p>Join us every Sunday at 9:00 AM for a time of corporate prayer before our worship service.</p>
+                        <strong>Time:</strong> 9:00 AM - 9:30 AM
+                    </div>
+                    
+                    <div class="prayer-card">
+                        <i class="fas fa-moon"></i>
+                        <h3>Wednesday Evening Prayer</h3>
+                        <p>Mid-week prayer meeting where we come together to seek God's face and pray for our community.</p>
+                        <strong>Time:</strong> 7:00 PM - 8:00 PM
+                    </div>
+                    
+                    <div class="prayer-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Prayer Chain Ministry</h3>
+                        <p>Urgent prayer requests are shared immediately with our dedicated prayer chain team for immediate intercession.</p>
+                        <strong>Contact:</strong> Call the church office
+                    </div>
+                    
+                    <div class="prayer-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>Prayer Partners</h3>
+                        <p>Connect with a prayer partner for ongoing support, encouragement, and mutual intercession.</p>
+                        <strong>How:</strong> Sign up through connection card
+                    </div>
+                </div>
+            </div>
+
+            <div class="prayer-request-main">
+                <h2>Submit a Prayer Request</h2>
+                <p>We would be honored to pray for you. Please share your request below, and our prayer team will lift you up in prayer.</p>
+                
+                <form class="prayer-form" action="mailto:church@broadstreetbaptist.org" method="post" enctype="text/plain">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency">Urgency Level</label>
+                            <select id="urgency" name="urgency">
+                                <option value="routine">Routine Prayer</option>
+                                <option value="urgent">Urgent - Please pray soon</option>
+                                <option value="emergency">Emergency - Please pray immediately</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="request-type">Type of Request</label>
+                        <select id="request-type" name="request-type">
+                            <option value="health">Health & Healing</option>
+                            <option value="family">Family & Relationships</option>
+                            <option value="financial">Financial Provision</option>
+                            <option value="spiritual">Spiritual Growth</option>
+                            <option value="guidance">Guidance & Decisions</option>
+                            <option value="praise">Praise & Thanksgiving</option>
+                            <option value="salvation">Salvation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="prayer-details">Prayer Request Details *</label>
+                        <textarea id="prayer-details" name="prayer-details" rows="6" placeholder="Please share your prayer request in detail. We will keep this confidential unless you indicate otherwise below." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="public-sharing"> 
+                            I'm comfortable with this request being shared publicly with our church family (first name only)
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="follow-up"> 
+                            I would like someone from our pastoral team to follow up with me
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="prayer-chain"> 
+                            Please add this to our urgent prayer chain (for emergency requests)
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
+                </form>
+            </div>
+
+            <div class="prayer-scriptures">
+                <h2>Biblical Foundation for Prayer</h2>
+                <div class="scripture-grid">
+                    <div class="scripture-card">
+                        <p><em>"Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God."</em></p>
+                        <cite>Philippians 4:6 KJV</cite>
+                    </div>
+                    
+                    <div class="scripture-card">
+                        <p><em>"And all things, whatsoever ye shall ask in prayer, believing, ye shall receive."</em></p>
+                        <cite>Matthew 21:22 KJV</cite>
+                    </div>
+                    
+                    <div class="scripture-card">
+                        <p><em>"The effectual fervent prayer of a righteous man availeth much."</em></p>
+                        <cite>James 5:16 KJV</cite>
+                    </div>
+                    
+                    <div class="scripture-card">
+                        <p><em>"Confess your faults one to another, and pray one for another, that ye may be healed."</em></p>
+                        <cite>James 5:16 KJV</cite>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prayer-testimonies">
+                <h2>Answered Prayers</h2>
+                <p>God is still answering prayers! Here are some recent testimonies from our church family:</p>
+                
+                <div class="testimonial-cards">
+                    <div class="testimonial-card">
+                        <p>"Thank you for praying for my job interview. I got the position and it's exactly what I needed for my family!"</p>
+                        <strong>- Sarah M.</strong>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>"The doctors said my surgery went perfectly. I felt so much peace knowing the church was praying for me."</p>
+                        <strong>- Robert T.</strong>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p>"Our marriage was struggling, but through your prayers and God's grace, we're stronger than ever."</p>
+                        <strong>- John & Mary K.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prayer-contact">
+                <h2>Contact Our Prayer Ministry</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Church Office</strong>
+                            <p>(252) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Prayer Requests</strong>
+                            <p>prayer@broadstreetbaptist.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Office Hours</strong>
+                            <p>Monday - Friday: 9 AM - 4 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

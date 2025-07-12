@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to Broad Street Missionary Baptist Church in Birmingham, AL. Join our loving church family for worship, fellowship, and spiritual growth. Sunday services at 11 AM." />
+  <meta name="keywords" content="Baptist church Birmingham, Christian fellowship, Bible study, Sunday worship, Pastor Rick Owens" />
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/main.js" as="script">
   <title>Home | Broad Street M.B. Church</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -51,11 +55,92 @@
         </div>
       </div>
       
+      <div class="upcoming-events">
+        <h3>Upcoming Events</h3>
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-date">
+              <span class="event-month">JUL</span>
+              <span class="event-day">21</span>
+            </div>
+            <div class="event-details">
+              <h4>Monthly Fellowship Dinner</h4>
+              <p><i class="fas fa-clock"></i> 6:00 PM</p>
+              <p><i class="fas fa-map-marker-alt"></i> Fellowship Hall</p>
+              <p>Join us for our monthly community dinner and fellowship time.</p>
+            </div>
+          </div>
+          
+          <div class="event-card">
+            <div class="event-date">
+              <span class="event-month">JUL</span>
+              <span class="event-day">28</span>
+            </div>
+            <div class="event-details">
+              <h4>Youth Summer Trip</h4>
+              <p><i class="fas fa-clock"></i> 8:00 AM - 6:00 PM</p>
+              <p><i class="fas fa-map-marker-alt"></i> Oak Mountain State Park</p>
+              <p>A fun day trip for our students with activities and fellowship.</p>
+            </div>
+          </div>
+          
+          <div class="event-card">
+            <div class="event-date">
+              <span class="event-month">AUG</span>
+              <span class="event-day">04</span>
+            </div>
+            <div class="event-details">
+              <h4>Back to School Prayer Service</h4>
+              <p><i class="fas fa-clock"></i> 7:00 PM</p>
+              <p><i class="fas fa-map-marker-alt"></i> Main Sanctuary</p>
+              <p>Special prayer service for students, teachers, and families.</p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="events.html" class="btn">View All Events</a>
+        </div>
+      </div>
+      
       <div class="cta-section">
         <h3>Join Us Online</h3>
         <p>Use our form to sign up and receive the Zoom link to watch online services.</p>
         <a href="connection-card.html" class="btn">Get Zoom Link</a>
         <a href="give.html" class="btn">Give Online</a>
+      </div>
+      
+      <div class="prayer-section">
+        <h3>Prayer Requests</h3>
+        <p>We believe in the power of prayer and would be honored to pray for you and your loved ones. Share your prayer requests with our church family.</p>
+        
+        <form class="prayer-form" action="mailto:church@broadstreetbaptist.org" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prayer-name">Your Name (Optional)</label>
+              <input type="text" id="prayer-name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="prayer-email">Email (Optional)</label>
+              <input type="email" id="prayer-email" name="email" placeholder="your@email.com">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="prayer-request">Prayer Request *</label>
+            <textarea id="prayer-request" name="prayer-request" rows="4" placeholder="Share your prayer request here..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="public-prayer"> 
+              I'm comfortable with this request being shared publicly (first name only)
+            </label>
+          </div>
+          <button type="submit" class="btn">Submit Prayer Request</button>
+        </form>
+        
+        <div class="scripture-verse">
+          <p><em>"Is any among you afflicted? let him pray. Is any merry? let him sing psalms."</em></p>
+          <cite>James 5:13 KJV</cite>
+        </div>
       </div>
     </div>
   </section>

@@ -56,6 +56,127 @@ ul {
   box-sizing: border-box;
 }
 
+/* ============= BREADCRUMB NAVIGATION ============= */
+.breadcrumb {
+  background: #f8f9fa;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.85rem;
+}
+
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb a {
+  color: var(--purple);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #6c757d;
+}
+
+.breadcrumb-separator {
+  color: #6c757d;
+  margin: 0 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
+}
+
+/* ============= QUICK CONTACT BAR ============= */
+.quick-contact {
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-contact .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.quick-contact-left {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.quick-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.quick-contact-item:hover {
+  color: var(--yellow);
+}
+
+.quick-contact-item i {
+  font-size: 0.8rem;
+}
+
+.quick-contact-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-quick {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-quick a {
+  color: var(--white);
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.social-quick a:hover {
+  color: var(--yellow);
+}
+
+@media (max-width: 768px) {
+  .quick-contact {
+    text-align: center;
+  }
+  
+  .quick-contact .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .quick-contact-left {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .quick-contact-item {
+    font-size: 0.8rem;
+  }
+}
+
 /* ============= NAVBAR ============= */
 .top-navbar {
   position: sticky;
@@ -1750,23 +1871,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.social-links a {
-  color: var(--primary-purple);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.social-links a:hover {
-  color: var(--accent-yellow);
-}
-
 /* Baptism Page Specific */
 .baptism-meaning h4,
 .baptism-requirements h4,
@@ -1848,61 +1952,381 @@ h2 {
   display: block;
 }
 
-/* Mobile Responsiveness for Next Steps Pages */
-@media (max-width: 768px) {
-  .service-times {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .pathway-steps {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .pathway-step {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .step-number {
-    margin-bottom: 1rem;
-  }
-  
-  .story-highlights,
-  .beliefs-grid,
-  .team-grid,
-  .facilities-info,
-  .digital-options {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .action-buttons,
-  .cta-buttons {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+/* ============= UPCOMING EVENTS STYLES ============= */
+
+.upcoming-events {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  box-shadow: 0 4px 15px rgba(52,22,57,0.08);
 }
 
-@media (max-width: 500px) {
-  .step-section,
-  .discover-section,
-  .baptism-section,
-  .welcome-intro,
-  .discover-intro,
-  .baptism-intro {
+.upcoming-events h3 {
+  color: var(--purple);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.event-card {
+  display: flex;
+  background: var(--gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(52,22,57,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 4px solid var(--yellow);
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(52,22,57,0.12);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-right: 1.5rem;
+  min-width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.event-month {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.event-day {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-details {
+  flex: 1;
+}
+
+.event-details h4 {
+  color: var(--purple);
+  margin: 0 0 0.8rem 0;
+  font-size: 1.2rem;
+}
+
+.event-details p {
+  margin: 0.4rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-details p:last-child {
+  margin-top: 0.8rem;
+  font-style: italic;
+  color: #555;
+}
+
+.event-details i {
+  color: var(--yellow);
+  width: 14px;
+}
+
+/* ============= PRAYER REQUEST SECTION ============= */
+.prayer-section {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--primary-color);
+}
+
+.prayer-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.prayer-form {
+  margin: 1.5rem 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 144, 220, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group label input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.scripture-verse {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 4px;
+  border-left: 3px solid #ffd700;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.scripture-verse p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.scripture-verse cite {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Prayer Page Specific Styles */
+.prayer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.prayer-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.prayer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.prayer-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.prayer-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.prayer-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+.prayer-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 144, 220, 0.1);
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto !important;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.scripture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.scripture-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #ffd700;
+    text-align: center;
+}
+
+.scripture-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.scripture-card cite {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    opacity: 0.3;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial-card strong {
+    font-weight: 600;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     padding: 1.5rem;
-  }
-  
-  .next-steps-actions,
-  .discover-cta,
-  .baptism-cta {
-    padding: 1.5rem;
-  }
-  
-  .team-member {
-    padding: 1.5rem;
-  }
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.contact-item strong {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #666;
+}
+
+.prayer-intro {
+    margin-bottom: 3rem;
+}
+
+.prayer-request-main {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.prayer-testimonies {
+    margin: 3rem 0;
+}
+
+/* Responsive adjustments for prayer page */
+@media (max-width: 768px) {
+    .prayer-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .scripture-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .prayer-request-main {
+        padding: 1rem;
+    }
 }
