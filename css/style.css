@@ -1125,12 +1125,14 @@ h2 {
   border-radius: 12px;
   margin: 3rem 0;
   text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .service-schedule h3 {
   color: var(--yellow);
   margin-bottom: 2rem;
   font-size: 1.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .schedule-grid {
@@ -1142,27 +1144,31 @@ h2 {
 }
 
 .service-item {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   padding: 1.5rem;
   border-radius: 8px;
   border: 2px solid var(--yellow);
   transition: transform 0.2s;
+  backdrop-filter: blur(5px);
 }
 
 .service-item:hover {
   transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .service-item h4 {
   color: var(--yellow);
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .service-item .time {
   font-size: 1.4rem;
   font-weight: 600;
   margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* ============= CONTACT PAGE STYLES ============= */
