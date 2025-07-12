@@ -65,7 +65,7 @@ ul {
   border-bottom: 1px solid #eee;
   z-index: 999;
   padding: 0;
-  min-height: 80px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 8px rgba(52,22,57,0.03);
@@ -81,7 +81,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 80px;
+  height: 100px;
   width: 100%;
   padding: 0;
   gap: 2rem;
@@ -90,14 +90,14 @@ ul {
 .nav-logo {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 100px;
   flex-shrink: 0;
   padding-left: 0;
 }
 
 .nav-logo img {
-  height: 110px;
-  max-width: 300px;
+  height: 130px;
+  max-width: 350px;
   margin: 0;
   vertical-align: middle;
   display: inline-block;
@@ -153,7 +153,7 @@ ul {
 .nav-cta {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 100px;
   flex-shrink: 0;
 }
 .nav-cta .btn-cta {
