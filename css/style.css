@@ -1113,3 +1113,103 @@ h2 {
     padding: 2rem;
   }
 }
+
+/* ============= SERVICE SCHEDULE STYLES ============= */
+
+.service-schedule {
+  background: linear-gradient(135deg, var(--purple), #220d29);
+  color: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.service-schedule h3 {
+  color: var(--yellow);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--yellow);
+  transition: transform 0.2s;
+}
+
+.service-item:hover {
+  transform: translateY(-3px);
+}
+
+.service-item h4 {
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.service-item .time {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ============= CONTACT PAGE STYLES ============= */
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.contact-details {
+  background: var(--gray);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.contact-details h3 {
+  color: var(--purple);
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-list a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+}
