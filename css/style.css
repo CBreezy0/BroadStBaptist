@@ -9,6 +9,8 @@
   --focus: #0077ff;
   --primary-purple: #341639;
   --accent-yellow: #ffc62f;
+  --primary-color: #341639;
+  --text-color: #333333;
 }
 
 /* ============= BASE ============= */
@@ -29,6 +31,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   width: 100%;
+  min-width: 320px;
 }
 
 a {
@@ -54,6 +57,17 @@ ul {
   padding: 0 2rem;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* Mobile container fixes */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  body {
+    font-size: 16px;
+  }
 }
 
 /* ============= BREADCRUMB NAVIGATION ============= */
@@ -93,6 +107,10 @@ ul {
 @media (max-width: 768px) {
   .breadcrumb {
     font-size: 0.8rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
   }
 }
 
@@ -198,6 +216,13 @@ ul {
   padding: 0 2rem;
 }
 
+/* Mobile navbar container fix */
+@media (max-width: 768px) {
+  .top-navbar .container {
+    padding: 0 1rem;
+  }
+}
+
 .nav-flex {
   display: flex;
   align-items: center;
@@ -223,6 +248,28 @@ ul {
   vertical-align: middle;
   display: inline-block;
   object-fit: contain;
+}
+
+/* Mobile navbar fixes */
+@media (max-width: 768px) {
+  .nav-logo {
+    padding-left: 0.5rem;
+    height: 80px;
+  }
+  
+  .nav-logo img {
+    height: 100px;
+    max-width: 250px;
+  }
+  
+  .top-navbar {
+    min-height: 80px;
+  }
+  
+  .nav-flex {
+    height: 80px;
+    padding: 0 0.5rem;
+  }
 }
 
 .nav-links {
@@ -420,8 +467,15 @@ ul {
   padding: 1.2rem 1.2rem 0.9rem 1.2rem;
   border-bottom: 1px solid #eee;
 }
+
+.mobile-nav-header .nav-logo {
+  padding-left: 0;
+  height: auto;
+}
+
 .mobile-nav-header .nav-logo img {
-  height: 40px;
+  height: 60px;
+  max-width: 200px;
 }
 .mobile-nav-close {
   background: none;
@@ -2330,3 +2384,206 @@ h2 {
         padding: 1rem;
     }
 }
+
+/* ===== COMPREHENSIVE MOBILE RESPONSIVE FIXES ===== */
+
+/* Additional mobile fixes for better responsive design */
+@media (max-width: 768px) {
+    /* Container and layout fixes */
+    .container {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .section {
+        padding: 2rem 0;
+    }
+    
+    /* Hero section mobile fixes */
+    .hero {
+        min-height: 300px;
+        padding: 2rem 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    
+    /* Form responsive fixes */
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .prayer-section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .scripture-verse {
+        padding: 1rem;
+    }
+    
+    /* Events grid mobile fixes */
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .event-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .event-date {
+        min-width: 60px;
+    }
+    
+    .event-month {
+        font-size: 0.7rem;
+    }
+    
+    .event-day {
+        font-size: 1.4rem;
+    }
+    
+    /* Service schedule mobile fixes */
+    .schedule-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .service-item {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    /* Button mobile fixes */
+    .btn {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        box-sizing: border-box;
+    }
+    
+    .cta-section {
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .cta-section .btn {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 300px;
+    }
+    
+    /* Prayer form specific mobile fixes */
+    .prayer-form .form-group label {
+        font-size: 0.95rem;
+    }
+    
+    .checkbox-group label {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+    
+    /* Navigation mobile improvements */
+    .top-navbar .container {
+        padding: 0 1rem;
+    }
+    
+    .menu-toggle {
+        margin-right: 0.5rem;
+    }
+    
+    /* Quick contact mobile fixes */
+    .quick-contact .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .quick-contact-left {
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .quick-contact-item {
+        font-size: 0.8rem;
+    }
+    
+    /* Prevent horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Small mobile devices (320px and up) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.8rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .event-card {
+        padding: 0.8rem;
+    }
+    
+    .prayer-section {
+        padding: 0.8rem;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 0.7rem;
+    }
+    
+    .quick-contact-left {
+        gap: 0.5rem;
+    }
+    
+    .quick-contact-item {
+        font-size: 0.75rem;
+    }
+    
+    .quick-contact-item span {
+        display: none;
+    }
+    
+    .quick-contact-item i {
+        font-size: 1rem;
+    }
+}
+
+/* ===== END MOBILE FIXES ===== */
