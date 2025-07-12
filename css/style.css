@@ -80,9 +80,11 @@ ul {
 .nav-flex {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
   width: 100%;
-  padding-right: 2rem;
+  padding: 0 2rem;
+  gap: 2rem;
 }
 
 .nav-logo {
@@ -90,29 +92,49 @@ ul {
   align-items: center;
   height: 80px;
   flex-shrink: 0;
-  margin-right: auto;
 }
 
 .nav-logo img {
   height: 110px;
-  max-width: 350px;
+  max-width: 300px;
   margin: 0;
   vertical-align: middle;
   display: inline-block;
   object-fit: contain;
 }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  gap: 1.5rem;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
 .top-navbar .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-right: 1rem;
+  gap: 1.2rem;
+  margin: 0;
 }
+
+.top-navbar .nav-links > li {
+  flex-shrink: 0;
+}
+
 .top-navbar .nav-links a,
 .top-navbar .nav-links .dropdown > a {
   color: var(--purple);
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
   transition: color 0.18s;
   letter-spacing: 0.003em;
   border-radius: 6px;
@@ -355,11 +377,34 @@ ul {
 
 /* ============= RESPONSIVE NAVBAR ============= */
 
+/* Medium screens - smaller desktop/laptop */
+@media (max-width: 1200px) {
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .nav-cta {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
 /* Tablet */
 @media (max-width: 900px) {
   .nav-logo img {
     height: 72px;
     max-width: 200px;
+  }
+  
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .nav-cta {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
   }
 }
 
