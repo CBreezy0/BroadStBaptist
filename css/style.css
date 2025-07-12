@@ -74,13 +74,13 @@ ul {
 
 /* Reset container padding completely for navbar */
 .top-navbar .container {
-  padding: 0;
+  padding: 0 2rem;
 }
 
 .nav-flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 80px;
   width: 100%;
   padding: 0;
@@ -92,6 +92,7 @@ ul {
   align-items: center;
   height: 80px;
   flex-shrink: 0;
+  padding-left: 0;
 }
 
 .nav-logo img {
@@ -109,7 +110,6 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: auto;
   margin-right: 2rem;
   gap: 1.5rem;
 }
