@@ -1,170 +1,251 @@
+/*!
+ * ============================================================================
+ * BROAD STREET MISSIONARY BAPTIST CHURCH - WEBSITE STYLES
+ * ============================================================================
+ * 
+ * File: style.css
+ * Purpose: Main stylesheet for church website
+ * Author: Chris
+ * Date: July 2025
+ * 
+ * OVERVIEW:
+ * This file contains all styles for the church website including:
+ * - Responsive design (mobile-first approach)
+ * - Navigation system (desktop + mobile overlay)
+ * - Color scheme and typography
+ * - Component styles for all pages
+ * - Accessibility features
+ * 
+ * COLOR SCHEME:
+ * - Primary Purple: #341639 (main brand color)
+ * - Accent Yellow: #ffc62f (calls-to-action, highlights)
+ * - White: #ffffff (backgrounds, text on dark)
+ * - Black: #000000 (primary text)
+ * - Gray: #f5f5f5 (subtle backgrounds)
+ * 
+ * BREAKPOINTS:
+ * - Mobile: up to 768px
+ * - Tablet: 769px to 1200px  
+ * - Desktop: 1201px and up
+ * 
+ * STRUCTURE:
+ * 1. CSS Custom Properties & Base Styles
+ * 2. Contact Bar (top of page)
+ * 3. Navigation System
+ * 4. Page Components
+ * 5. Footer
+ * 6. Responsive Media Queries
+ * 
+ * ============================================================================
+ */
+
+/* ============================================================================
+   1. CSS CUSTOM PROPERTIES & IMPORTS
+   ============================================================================ */
+   
+/* Import Google Fonts - DM Sans for clean, modern typography */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
+/* CSS Custom Properties - Change these to update colors site-wide */
 :root {
-  --purple: #341639;
-  --yellow: #ffc62f;
-  --white: #ffffff;
-  --black: #000000;
-  --gray: #f5f5f5;
-  --focus: #0077ff;
+  /* Primary Brand Colors */
+  --purple: #341639;        /* Main brand color - used for headers, nav, footer */
+  --yellow: #ffc62f;        /* Accent color - used for buttons, highlights */
+  --white: #ffffff;         /* Clean backgrounds and text on dark areas */
+  --black: #000000;         /* Primary text color */
+  --gray: #f5f5f5;          /* Subtle backgrounds for sections */
+  
+  /* Additional Color Variables (aliases for consistency) */
+  --focus: #0077ff;         /* Focus state color for accessibility */
   --primary-purple: #341639;
   --accent-yellow: #ffc62f;
   --primary-color: #341639;
   --text-color: #333333;
 }
 
-/* ============= BASE ============= */
+/* ============================================================================
+   2. BASE STYLES & TYPOGRAPHY
+   ============================================================================ */
+
+/* Reset all elements to use border-box sizing for predictable layouts */
 * {
   box-sizing: border-box;
 }
 
+/* Prevent horizontal scrolling on any screen size */
 html {
   overflow-x: hidden;
 }
 
+/* Main body styles - sets foundation for entire site */
 body {
   margin: 0;
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;  /* Fallback fonts for reliability */
   background-color: var(--white);
   color: var(--black);
-  font-size: 18px;
-  line-height: 1.6;
-  overflow-x: hidden;
+  font-size: 18px;          /* Base font size - scales down on mobile */
+  line-height: 1.6;         /* Comfortable reading line height */
+  overflow-x: hidden;       /* Prevent horizontal scroll */
   width: 100%;
-  min-width: 320px;
+  min-width: 320px;         /* Minimum width for very small devices */
 }
 
+/* Default link styles - consistent across the site */
 a {
   text-decoration: none;
   color: var(--purple);
-  transition: color 0.2s;
+  transition: color 0.2s;   /* Smooth color transitions on hover */
 }
 
+/* Accessibility: Focus states for keyboard navigation */
 a:focus, button:focus, input:focus, textarea:focus {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
 
+/* Remove default list styling for cleaner navigation */
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Container class - centers content and provides consistent padding */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: 1200px;        /* Maximum content width for readability */
+  margin: 0 auto;           /* Center the container */
+  padding: 0 2rem;          /* Consistent side padding */
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Mobile container fixes */
+/* Mobile container adjustments - smaller padding for mobile screens */
 @media (max-width: 768px) {
   .container {
-    padding: 0 1rem;
+    padding: 0 1rem;         /* Reduced padding on mobile */
   }
   
   body {
-    font-size: 16px;
+    font-size: 16px;         /* Smaller base font size on mobile */
   }
 }
 
-/* ============= BREADCRUMB NAVIGATION ============= */
+/* ============================================================================
+   3. BREADCRUMB NAVIGATION
+   ============================================================================ */
+   
+/* Breadcrumb navigation for page hierarchy - helps users understand location */
 .breadcrumb {
-  background: #f8f9fa;
+  background: #f8f9fa;               /* Light background to separate from content */
   padding: 0.8rem 0;
-  border-bottom: 1px solid #e9ecef;
-  font-size: 0.85rem;
+  border-bottom: 1px solid #e9ecef;  /* Subtle border for definition */
+  font-size: 0.85rem;                /* Smaller text since it's secondary navigation */
 }
 
+/* Breadcrumb container layout */
 .breadcrumb .container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5rem;                       /* Space between breadcrumb items */
 }
 
+/* Breadcrumb link styles */
 .breadcrumb a {
-  color: var(--purple);
+  color: var(--purple);              /* Match brand color */
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .breadcrumb a:hover {
-  color: var(--yellow);
+  color: var(--yellow);              /* Highlight on hover */
   text-decoration: underline;
 }
 
+/* Current page indicator (non-clickable) */
 .breadcrumb span {
-  color: #6c757d;
+  color: #6c757d;                    /* Muted color for current page */
 }
 
+/* Separator between breadcrumb items */
 .breadcrumb-separator {
   color: #6c757d;
   margin: 0 0.3rem;
 }
 
+/* Mobile breadcrumb adjustments */
 @media (max-width: 768px) {
   .breadcrumb {
-    font-size: 0.8rem;
+    font-size: 0.8rem;               /* Even smaller on mobile */
   }
   
   .container {
-    padding: 0 1rem;
+    padding: 0 1rem;                 /* Consistent with mobile container */
   }
 }
 
-/* ============= QUICK CONTACT BAR ============= */
+/* ============================================================================
+   4. QUICK CONTACT BAR (Top of page)
+   ============================================================================ */
+   
+/* Top contact bar with essential church information */
 .quick-contact {
-  background-color: var(--purple);
+  background-color: var(--purple);   /* Brand color background */
   color: var(--white);
   padding: 0.5rem 0;
-  font-size: 0.85rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;                /* Smaller text for compact display */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);  /* Subtle separator */
 }
 
+/* Contact bar layout container */
 .quick-contact .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;    /* Push left and right content apart */
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap;                   /* Allow wrapping on smaller screens */
   gap: 1rem;
 }
 
+/* Left side contact information group */
 .quick-contact-left {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 2rem;                         /* Space between contact items */
+  flex-wrap: wrap;                   /* Allow wrapping if needed */
 }
 
+/* Individual contact information items */
 .quick-contact-item {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.4rem;                       /* Space between icon and text */
   color: var(--white);
   text-decoration: none;
   transition: color 0.2s;
 }
 
+/* Hover effect for clickable contact items */
 .quick-contact-item:hover {
-  color: var(--yellow);
+  color: var(--yellow);              /* Highlight color on hover */
 }
 
+/* Contact item icons */
 .quick-contact-item i {
-  font-size: 0.8rem;
+  font-size: 0.8rem;                 /* Slightly smaller icons */
 }
 
+/* Right side of contact bar (social media) */
 .quick-contact-right {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
+/* Social media icons container */
 .social-quick {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.8rem;                       /* Space between social icons */
 }
 
+/* Social media icon links */
 .social-quick a {
   color: var(--white);
   font-size: 1rem;
@@ -172,36 +253,37 @@ ul {
 }
 
 .social-quick a:hover {
-  color: var(--yellow);
+  color: var(--yellow);              /* Highlight on hover */
 }
 
+/* Mobile contact bar adjustments */
 @media (max-width: 768px) {
   .quick-contact {
-    text-align: center;
-    padding: 0.8rem 0;
+    text-align: center;              /* Center everything on mobile */
+    padding: 0.8rem 0;               /* More padding for touch targets */
   }
   
   .quick-contact .container {
-    flex-direction: column;
+    flex-direction: column;          /* Stack vertically on mobile */
     gap: 1rem;
     padding: 0 1rem;
   }
   
   .quick-contact-left {
-    justify-content: center;
+    justify-content: center;         /* Center the contact items */
     gap: 1.5rem;
     flex-wrap: wrap;
   }
   
   .quick-contact-item {
-    font-size: 0.9rem;
+    font-size: 0.9rem;               /* Slightly larger text on mobile */
     gap: 0.6rem;
-    padding: 0.3rem;
+    padding: 0.3rem;                 /* Larger touch targets */
   }
   
   .quick-contact-item i {
     font-size: 1rem;
-    min-width: 16px;
+    min-width: 16px;                 /* Ensure consistent icon spacing */
   }
   
   .social-quick {
@@ -209,11 +291,12 @@ ul {
     justify-content: center;
   }
   
+  /* Enhanced social icons for mobile */
   .social-quick a {
     font-size: 1.3rem;
     padding: 0.5rem;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;              /* Circular background */
+    background: rgba(255, 255, 255, 0.1);  /* Subtle background */
     width: 40px;
     height: 40px;
     display: flex;
@@ -223,78 +306,101 @@ ul {
   }
   
   .social-quick a:hover {
-    background: var(--yellow);
-    color: var(--purple);
+    background: var(--yellow);       /* Yellow background on hover */
+    color: var(--purple);            /* Purple text on yellow background */
   }
 }
 
-/* ============= NAVBAR ============= */
+/* ============================================================================
+   5. MAIN NAVIGATION SYSTEM
+   ============================================================================ */
+
+/* 
+ * NAVIGATION OVERVIEW:
+ * - Desktop: Horizontal navigation with dropdowns
+ * - Mobile: Hamburger menu with full-screen overlay
+ * - Responsive: Switches at 768px breakpoint
+ * - Accessibility: Keyboard navigation and ARIA labels
+ */
+
+/* Main navigation container - sticky header */
 .top-navbar {
-  position: sticky;
+  position: sticky;                  /* Stays at top when scrolling */
   top: 0;
   width: 100%;
   background-color: var(--white);
-  border-bottom: 1px solid #eee;
-  z-index: 999;
+  border-bottom: 1px solid #eee;     /* Subtle bottom border */
+  z-index: 999;                      /* Above other content */
   padding: 0;
-  min-height: 100px;
+  min-height: 100px;                 /* Consistent height on desktop */
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(52,22,57,0.03);
-  overflow: visible;
+  box-shadow: 0 2px 8px rgba(52,22,57,0.03);  /* Subtle shadow */
+  overflow: visible;                 /* Allow dropdowns to show */
 }
 
-/* Desktop Navigation */
+/* ============================================================================
+   5a. DESKTOP NAVIGATION LAYOUT
+   ============================================================================ */
+
+/* Desktop navigation container - visible on screens > 768px */
 .desktop-nav {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;    /* Logo left, nav right */
   padding: 0 2rem;
 }
 
+/* Desktop logo container */
 .desktop-nav .nav-logo {
   display: flex;
   align-items: center;
-  height: 100px;
-  flex-shrink: 0;
-  margin-left: 2rem;
+  height: 100px;                     /* Match navbar height */
+  flex-shrink: 0;                    /* Don't compress logo */
+  margin-left: 2rem;                 /* Extra space from edge */
 }
 
+/* Desktop navigation content (links + CTA button) */
 .desktop-nav .nav-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2rem;                         /* Space between nav links and CTA */
 }
 
-/* Mobile Navigation */
+/* ============================================================================
+   5b. MOBILE NAVIGATION LAYOUT  
+   ============================================================================ */
+
+/* Mobile navigation container - hidden by default, shown on mobile */
 .mobile-nav {
-  display: none;
+  display: none;                     /* Hidden on desktop */
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;    /* Logo left, hamburger right */
   padding: 0 1rem;
 }
 
+/* Mobile logo container */
 .mobile-nav .nav-logo {
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 70px;                      /* Smaller height for mobile */
   flex-shrink: 0;
 }
 
-/* Media Query for Mobile */
+/* Mobile breakpoint - switch from desktop to mobile navigation */
 @media (max-width: 768px) {
   .top-navbar {
-    min-height: 70px;
+    min-height: 70px;                /* Smaller navbar on mobile */
   }
   
   .desktop-nav {
-    display: none;
+    display: none;                   /* Hide desktop nav */
   }
   
   .mobile-nav {
-    display: flex;
+    display: flex;                   /* Show mobile nav */
   }
 }
 

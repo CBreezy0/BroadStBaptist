@@ -1,15 +1,55 @@
+<!--
+============================================================================
+BROAD STREET MISSIONARY BAPTIST CHURCH - CONTACT PAGE
+============================================================================
+
+File: contact.html
+Purpose: Church contact information, location, and service times
+Author: Chris
+Date: July 2025
+
+OVERVIEW:
+This page provides:
+- Complete contact information (phone, email, address)
+- Service schedule and times
+- Location and directions
+- Ways to connect with the church
+
+CUSTOMIZATION AREAS:
+- Contact details (phone, email, address)
+- Service times and schedule
+- Additional contact methods
+- Location or directions information
+
+============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ============================================================================
+       HTML HEAD SECTION - Page Setup and SEO
+       ============================================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Broad Street Missionary Baptist Church</title>
+  
+  <!-- Page Title and SEO -->
+  <title>Contact | Broad Street Missionary Baptist Church</title>
+  <meta name="description" content="Contact Broad Street Missionary Baptist Church in Birmingham, AL. Service times, location, phone, and email information." />
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
+  <!-- ============================================================================
+       NAVIGATION - Loaded from Partial
+       ============================================================================ -->
   <div id="site-nav"></div>
 
+  <!-- ============================================================================
+       HERO SECTION - Contact Page Title
+       ============================================================================ -->
   <header class="hero">
     <div class="hero-text">
       <h1>Contact</h1>
@@ -17,24 +57,32 @@
     </div>
   </header>
 
+  <!-- ============================================================================
+       MAIN CONTENT SECTION - Contact Information
+       ============================================================================ -->
   <section class="section">
     <div class="container">
+      <!-- Contact Introduction -->
       <h2>Contact Information</h2>
       <p>We'd love to hear from you! Whether you have questions about our church, want to learn more about our ministries, or need prayer support, we're here for you.</p>
       
       <div class="contact-info">
+        <!-- Contact Details Section -->
         <div class="contact-details">
           <h3>Get in Touch</h3>
           <ul class="contact-list">
+            <!-- UPDATE THESE CONTACT DETAILS AS NEEDED -->
             <li><strong>Phone:</strong> <a href="tel:+12052511372">(205) 251-1372</a></li>
             <li><strong>Address:</strong> 121 Morris Ave, Birmingham, AL 35204</li>
             <li><strong>Email:</strong> <a href="mailto:church@broadstreetbaptist.org">church@broadstreetbaptist.org</a></li>
           </ul>
         </div>
         
+        <!-- Service Schedule Section -->
         <div class="service-schedule">
           <h3>Weekly Service Schedule</h3>
           <div class="schedule-grid">
+            <!-- UPDATE SERVICE TIMES AS NEEDED -->
             <div class="service-item">
               <h4>Sunday School</h4>
               <p class="time">9:30 AM</p>
@@ -57,10 +105,66 @@
         
         <p>For online services, visit our <a href="connection-card.html">Connection Card</a> page to sign up and receive the Zoom link.</p>
       </div>
+
+      <!-- ============================================================================
+           LOCATION & DIRECTIONS SECTION - Physical Address Information
+           ============================================================================ -->
+      <!-- Location details for easy reference -->
+      <div class="location-section">
+        <h3>Location & Directions</h3>
+        <p>Find us at our physical address for in-person services and events.</p>
+        <div class="map-container">
+          <!-- Embed Google Map for location -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-86.123456789!3d33.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8888abcdef012345%3A0x123456789abcdef0!2sBroad%20Street%20Missionary%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p class="address">121 Morris Ave, Birmingham, AL 35204</p>
+      </div>
+
+      <!-- ============================================================================
+           ADDITIONAL CONTACT METHODS - Social Media, Forms, etc.
+           ============================================================================ -->
+      <!-- Add social media links or other ways to connect -->
+      <div class="social-media-section">
+        <h3>Connect with Us</h3>
+        <p>Follow us on social media or reach out through our online form.</p>
+        <ul class="social-media-list">
+          <!-- UPDATE OR ADD SOCIAL MEDIA ACCOUNTS AS NEEDED -->
+          <li><a href="https://www.facebook.com/BroadStreetBaptist" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="https://twitter.com/BSMBC" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://www.instagram.com/broadstreetbaptist/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+        
+        <!-- Online Contact Form -->
+        <div class="contact-form">
+          <h4>Send us a Message</h4>
+          <form action="https://formspree.io/f/mwkayzgj" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- ============================================================================
+       FOOTER - Loaded from Partial
+       ============================================================================ -->
   <div id="site-footer"></div>
+
+  <!-- ============================================================================
+       JAVASCRIPT - Page Functionality
+       ============================================================================ -->
   <script src="js/main.js"></script>
 </body>
 </html>

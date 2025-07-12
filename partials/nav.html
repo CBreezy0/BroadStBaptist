@@ -1,105 +1,228 @@
-<!-- QUICK CONTACT BAR -->
+<!--
+============================================================================
+BROAD STREET MISSIONARY BAPTIST CHURCH - NAVIGATION PARTIAL
+============================================================================
+
+File: partials/nav.html
+Purpose: Main navigation component used across all pages
+Author: Chris
+Date: July 2025
+
+OVERVIEW:
+This partial contains:
+- Quick contact bar with church info and social media
+- Responsive navigation (desktop dropdown + mobile overlay)
+- Church logo and branding
+- Accessibility features (ARIA labels, keyboard navigation)
+
+STRUCTURE:
+1. Quick Contact Bar (top)
+2. Main Navigation Container
+3. Desktop Navigation Layout
+4. Mobile Navigation Layout
+5. Mobile Overlay Menu
+
+CUSTOMIZATION:
+- Contact info: Update phone, address, service times below
+- Social media: Update links in quick-contact-right section
+- Logo: Replace assets/logo.png with your church logo
+- Navigation: Modify navLinksData in main.js to change menu items
+
+============================================================================
+-->
+
+<!-- ============================================================================
+     1. QUICK CONTACT BAR
+     ============================================================================ -->
+<!-- Top bar with essential church contact information and social media -->
 <div class="quick-contact">
   <div class="container">
+    <!-- LEFT SIDE: Contact Information -->
     <div class="quick-contact-left">
+      <!-- Church Phone Number (clickable for mobile) -->
       <a href="tel:+12052511372" class="quick-contact-item">
         <i class="fas fa-phone"></i>
         <span>(205) 251-1372</span>
       </a>
+      
+      <!-- Service Time Information -->
       <span class="quick-contact-item">
         <i class="fas fa-clock"></i>
         <span>Sunday 11 AM</span>
       </span>
+      
+      <!-- Church Address -->
       <span class="quick-contact-item">
         <i class="fas fa-map-marker-alt"></i>
         <span>121 Morris Ave, Birmingham, AL</span>
       </span>
     </div>
+    
+    <!-- RIGHT SIDE: Social Media Links -->
     <div class="quick-contact-right">
       <div class="social-quick">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <!-- Update these URLs with your actual social media accounts -->
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- CLEAN TOP NAVBAR with MOBILE OVERLAY MENU -->
+<!-- ============================================================================
+     2. MAIN NAVIGATION CONTAINER
+     ============================================================================ -->
 
+<!-- Responsive navigation container - switches between desktop and mobile layouts -->
 <nav class="top-navbar">
-  <!-- Desktop Navigation -->
+  
+  <!-- ============================================================================
+       3. DESKTOP NAVIGATION LAYOUT (visible on screens > 768px)
+       ============================================================================ -->
   <div class="desktop-nav">
+    <!-- Church Logo (left side) -->
     <div class="nav-logo">
       <a href="index.html">
-        <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">Broad Street Baptist</span>
+        <!-- Main logo image with fallback text -->
+        <img src="assets/logo.png" 
+             alt="Broad Street Missionary Baptist Church logo" 
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <!-- Fallback text if image fails to load -->
+        <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">
+          Broad Street Baptist
+        </span>
       </a>
     </div>
+    
+    <!-- Navigation Content (right side) -->
     <div class="nav-content">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="about.html">About</a>
-        <ul class="dropdown-menu">
-          <li><a href="history.html">History</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="ministries.html">Ministries</a>
-        <ul class="dropdown-menu">
-          <li><a href="ministries.html">All Ministries</a></li>
-          <li><a href="kids.html">Children's Ministry</a></li>
-          <li><a href="students.html">Student Ministry</a></li>
-          <li><a href="mens-ministry.html">Men's Ministry</a></li>
-          <li><a href="womens-ministry.html">Women's Ministry</a></li>
-          <li><a href="worship.html">Worship Ministry</a></li>
-          <li><a href="care-ministry.html">Care Ministry</a></li>
-          <li><a href="media-ministry.html">Media & Technology</a></li>
-          <li><a href="missions-ministry.html">Missions & Outreach</a></li>
-        </ul>
-      </li>
-      <li><a href="connection-card.html">Connection Card</a></li>
-      <li><a href="messages.html">Messages</a></li>
-      <li class="dropdown">
-        <a href="next-steps.html">Next Steps</a>
-        <ul class="dropdown-menu">
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="baptism.html">Baptism</a></li>
-        </ul>
-      </li>
-      <li><a href="give.html">Give</a></li>
-      <li><a href="events.html">Events</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="messages.html" class="btn-cta">Watch</a>
-    </div>
+      <!-- Main Navigation Links -->
+      <ul class="nav-links">
+        <!-- HOME -->
+        <li><a href="index.html">Home</a></li>
+        
+        <!-- ABOUT (with dropdown) -->
+        <li class="dropdown">
+          <a href="about.html">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="history.html">History</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </li>
+        
+        <!-- MINISTRIES (with dropdown) -->
+        <li class="dropdown">
+          <a href="ministries.html">Ministries</a>
+          <ul class="dropdown-menu">
+            <li><a href="ministries.html">All Ministries</a></li>
+            <li><a href="kids.html">Children's Ministry</a></li>
+            <li><a href="students.html">Student Ministry</a></li>
+            <li><a href="mens-ministry.html">Men's Ministry</a></li>
+            <li><a href="womens-ministry.html">Women's Ministry</a></li>
+            <li><a href="worship.html">Worship Ministry</a></li>
+            <li><a href="care-ministry.html">Care Ministry</a></li>
+            <li><a href="media-ministry.html">Media & Technology</a></li>
+            <li><a href="missions-ministry.html">Missions & Outreach</a></li>
+          </ul>
+        </li>
+        
+        <!-- DIRECT NAVIGATION ITEMS -->
+        <li><a href="connection-card.html">Connection Card</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        
+        <!-- NEXT STEPS (with dropdown) -->
+        <li class="dropdown">
+          <a href="next-steps.html">Next Steps</a>
+          <ul class="dropdown-menu">
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="baptism.html">Baptism</a></li>
+          </ul>
+        </li>
+        
+        <!-- MORE DIRECT ITEMS -->
+        <li><a href="give.html">Give</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+      
+      <!-- Call-to-Action Button -->
+      <div class="nav-cta">
+        <a href="messages.html" class="btn-cta">Watch</a>
+      </div>
     </div>
   </div>
 
-  <!-- Mobile Navigation -->
+  <!-- ============================================================================
+       4. MOBILE NAVIGATION LAYOUT (visible on screens ≤ 768px)
+       ============================================================================ -->
   <div class="mobile-nav">
+    <!-- Church Logo (left side on mobile) -->
     <div class="nav-logo">
       <a href="index.html">
-        <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">Broad Street Baptist</span>
+        <img src="assets/logo.png" 
+             alt="Broad Street Missionary Baptist Church logo" 
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">
+          Broad Street Baptist
+        </span>
       </a>
     </div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+    
+    <!-- Hamburger Menu Button (right side on mobile) -->
+    <button class="menu-toggle" 
+            id="menu-toggle" 
+            aria-label="Open navigation menu" 
+            aria-expanded="false">
+      <!-- Hamburger icon structure for CSS styling -->
       <span class="menu-icon"></span>
     </button>
   </div>
 </nav>
 
-  <!-- MOBILE NAV OVERLAY -->
-  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
-    <div class="mobile-nav-header">
-      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">&times;</button>
-    </div>
-    <ul class="mobile-nav-list" id="mobile-nav-list">
-      <!-- Populated by JS for main menu or submenu -->
-    </ul>
+<!-- ============================================================================
+     5. MOBILE OVERLAY MENU (full-screen overlay for mobile navigation)
+     ============================================================================ -->
+<!-- Hidden by default, shown when hamburger menu is clicked -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+  <!-- Overlay Header with Close Button -->
+  <div class="mobile-nav-header">
+    <button class="mobile-nav-close" 
+            id="mobile-nav-close" 
+            aria-label="Close menu">&times;</button>
   </div>
-</nav>
+  
+  <!-- Mobile Navigation List (populated by JavaScript) -->
+  <ul class="mobile-nav-list" id="mobile-nav-list">
+    <!-- Navigation items are dynamically generated by main.js -->
+    <!-- This allows for submenu navigation and consistent structure -->
+  </ul>
+</div>
+
+<!--
+============================================================================
+END OF NAVIGATION PARTIAL
+============================================================================
+
+NOTES FOR CUSTOMIZATION:
+1. To add/remove navigation items, edit the navLinksData array in main.js
+2. To change contact information, update the quick-contact section above
+3. To change social media links, update the social-quick section
+4. Logo is loaded from assets/logo.png - replace with your church logo
+5. Colors and styling are controlled by CSS custom properties in style.css
+
+ACCESSIBILITY FEATURES:
+- ARIA labels on all interactive elements
+- Keyboard navigation support
+- Focus management for mobile menu
+- Screen reader friendly structure
+- Semantic HTML elements
+
+============================================================================
+-->

@@ -1,20 +1,103 @@
+<!--
+============================================================================
+BROAD STREET MISSIONARY BAPTIST CHURCH - FOOTER PARTIAL
+============================================================================
+
+File: partials/footer.html
+Purpose: Site footer component used across all pages
+Author: Chris
+Date: July 2025
+
+OVERVIEW:
+This partial contains:
+- Church location and address
+- Contact information (email, phone)
+- Social media links
+- Responsive layout (3-column desktop, stacked mobile)
+
+STRUCTURE:
+- Left: Location information
+- Center: Social media icons
+- Right: Contact information
+
+CUSTOMIZATION:
+- Address: Update the location section below
+- Contact: Update email and phone in footer-contact section
+- Social Media: Update URLs in social-icons section
+
+============================================================================
+-->
+
+<!-- ============================================================================
+     MAIN FOOTER CONTAINER
+     ============================================================================ -->
 <footer class="footer">
   <div class="container footer-grid">
+    
+    <!-- ============================================================================
+         LEFT SECTION: Church Location
+         ============================================================================ -->
     <div class="footer-section">
       <h3>Location</h3>
-      <p>121 Morris Ave<br>Birmingham, AL 35204</p>
-    </div>
-    <div class="footer-section social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-    <div class="footer-section footer-contact">
-  <h3>Contact</h3>
       <p>
+        121 Morris Ave<br>
+        Birmingham, AL 35204
+      </p>
+    </div>
+    
+    <!-- ============================================================================
+         CENTER SECTION: Social Media Links
+         ============================================================================ -->
+    <div class="footer-section social-icons">
+      <!-- Update these URLs with your actual social media accounts -->
+      <a href="https://facebook.com" target="_blank" aria-label="Visit our Facebook page">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Follow us on Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="Subscribe to our YouTube channel">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    
+    <!-- ============================================================================
+         RIGHT SECTION: Contact Information
+         ============================================================================ -->
+    <div class="footer-section footer-contact">
+      <h3>Contact</h3>
+      <p>
+        <!-- Email link (opens default email client) -->
         <a href="mailto:church@broadstreetbaptist.org">church@broadstreetbaptist.org</a><br>
+        <!-- Phone link (clickable on mobile devices) -->
         <a href="tel:+12052511372">(205) 251-1372</a>
       </p>
     </div>
+    
   </div>
 </footer>
+
+<!--
+============================================================================
+END OF FOOTER PARTIAL
+============================================================================
+
+NOTES FOR CUSTOMIZATION:
+1. Update church address in the Location section
+2. Update email address in the Contact section
+3. Update phone number in the Contact section
+4. Update social media URLs to point to your actual accounts
+5. Colors and styling are controlled by CSS in style.css
+
+RESPONSIVE BEHAVIOR:
+- Desktop: 3-column layout (Location | Social | Contact)
+- Mobile: Stacked layout with centered content
+
+ACCESSIBILITY FEATURES:
+- ARIA labels on social media links
+- Semantic footer element
+- Proper heading hierarchy
+- Clickable phone and email links
+
+============================================================================
+-->

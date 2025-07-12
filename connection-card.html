@@ -1,15 +1,59 @@
+<!--
+============================================================================
+BROAD STREET MISSIONARY BAPTIST CHURCH - CONNECTION CARD PAGE
+============================================================================
+
+File: connection-card.html
+Purpose: Contact form for visitors and members to connect with the church
+Author: Chris
+Date: July 2025
+
+OVERVIEW:
+This page provides:
+- Welcome message for visitors and members
+- Connection form for contact information
+- Ministry interest selections
+- Prayer request submissions
+- Next steps for getting involved
+
+CUSTOMIZATION AREAS:
+- Welcome message and instructions
+- Form fields and options
+- Ministry categories and options
+- Contact submission process
+- Follow-up information
+
+IMPORTANT: This form needs backend processing or form service integration
+
+============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ============================================================================
+       HTML HEAD SECTION - Page Setup and SEO
+       ============================================================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Page Title and SEO -->
   <title>Connection Card | Broad Street M.B. Church</title>
+  <meta name="description" content="Connect with Broad Street Missionary Baptist Church. Fill out our connection card to stay in touch and get involved in ministries." />
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
+  <!-- ============================================================================
+       NAVIGATION - Loaded from Partial
+       ============================================================================ -->
   <div id="site-nav"></div>
 
+  <!-- ============================================================================
+       HERO SECTION - Connection Card Page Title
+       ============================================================================ -->
   <header class="hero">
     <div class="hero-text">
       <h1>Connection Card</h1>
@@ -17,22 +61,36 @@
     </div>
   </header>
 
+  <!-- ============================================================================
+       MAIN CONTENT SECTION - Connection Form
+       ============================================================================ -->
   <section class="section">
     <div class="container">
+      <!-- Welcome Message -->
       <div class="welcome-message">
         <h2>Welcome to Broad Street Missionary Baptist Church!</h2>
+        <!-- UPDATE WELCOME MESSAGE AS NEEDED -->
         <p>We're so glad you're here! Whether you're visiting for the first time or you've been part of our church family for years, we'd love to connect with you and learn how we can serve you better. Please take a moment to fill out this connection card so we can stay in touch and help you get more involved in our church community.</p>
         
+        <!-- Biblical Foundation -->
         <div class="scripture-verse">
           <p><em>"And let us consider one another to provoke unto love and to good works: Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching."</em></p>
           <cite>Hebrews 10:24-25 KJV</cite>
         </div>
       </div>
 
+      <!-- ============================================================================
+           CONNECTION FORM - Main Contact Form
+           ============================================================================ -->
       <div class="connection-card-form">
+        <!-- IMPORTANT: This form currently uses mailto - consider updating to a form service -->
+        <!-- UPDATE FORM ACTION/METHOD FOR PROPER BACKEND PROCESSING -->
         <form class="connection-form" action="mailto:church@broadstreetbaptist.org" method="post" enctype="text/plain">
+          
+          <!-- Personal Information Section -->
           <div class="form-section">
             <h3>Personal Information</h3>
+            <!-- UPDATE REQUIRED FIELDS AS NEEDED -->
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name *</label>
@@ -63,8 +121,10 @@
             </div>
           </div>
 
+          <!-- Visit Status Section -->
           <div class="form-section">
             <h3>Visit Status</h3>
+            <!-- UPDATE VISIT STATUS OPTIONS AS NEEDED -->
             <div class="form-group">
               <label for="visitStatus">How would you describe your connection with us? *</label>
               <select id="visitStatus" name="visitStatus" required>
@@ -78,8 +138,10 @@
             </div>
           </div>
 
+          <!-- Ministry Interests Section -->
           <div class="form-section">
-            <h3>Areas of Interest & Involvement</h3>
+            <h3>Ministry Interests</h3>
+            <!-- UPDATE MINISTRY OPTIONS AS NEEDED -->
             <p>What ministries or activities interest you? (Check all that apply)</p>
             <div class="checkbox-grid">
               <div class="checkbox-item">
@@ -144,14 +206,17 @@
             </div>
           </div>
 
+          <!-- Prayer Requests Section -->
           <div class="form-section">
             <h3>Prayer Requests & Comments</h3>
+            <!-- UPDATE PRAYER REQUEST SECTION AS NEEDED -->
             <div class="form-group">
               <label for="prayerRequests">How can we pray for you? Do you have any questions or comments?</label>
               <textarea id="prayerRequests" name="prayerRequests" rows="4" placeholder="Share any prayer needs, questions about our church, or comments you'd like us to know..."></textarea>
             </div>
           </div>
 
+          <!-- Follow-Up Preference Section -->
           <div class="form-section">
             <h3>Follow-Up Preference</h3>
             <p>How would you prefer we contact you? (Check all that apply)</p>
@@ -183,11 +248,20 @@
             </div>
           </div>
 
-          <button type="submit" class="btn btn-large">Connect with Us</button>
+          <!-- Form Submission -->
+          <div class="form-section">
+            <!-- UPDATE SUBMISSION BUTTON TEXT AS NEEDED -->
+            <button type="submit" class="btn btn-large">Connect with Us</button>
+          </div>
+          
         </form>
       </div>
       
-      <div class="connection-info">
+      <!-- ============================================================================
+           FOLLOW-UP INFORMATION - What Happens Next
+           ============================================================================ -->
+      <div class="followup-info">
+        <!-- UPDATE FOLLOW-UP PROCESS AS NEEDED -->
         <h3>What Happens Next?</h3>
         <p>After you submit your connection card, here's what you can expect:</p>
         <ul>
@@ -210,7 +284,14 @@
     </div>
   </section>
 
+  <!-- ============================================================================
+       FOOTER - Loaded from Partial
+       ============================================================================ -->
   <div id="site-footer"></div>
+
+  <!-- ============================================================================
+       JAVASCRIPT - Page Functionality
+       ============================================================================ -->
   <script src="js/main.js"></script>
 </body>
 </html>

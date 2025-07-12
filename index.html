@@ -1,53 +1,128 @@
+<!--
+============================================================================
+BROAD STREET MISSIONARY BAPTIST CHURCH - HOME PAGE
+============================================================================
+
+File: index.html
+Purpose: Main homepage for church website
+Author: Chris
+Date: July 2025
+
+OVERVIEW:
+This is the main landing page that includes:
+- Welcome message and hero section
+- Pastor's greeting
+- Service schedule
+- Upcoming events
+- Call-to-action sections
+
+STRUCTURE:
+1. HTML Head (SEO, meta tags, stylesheets)
+2. Navigation (loaded from partial)
+3. Hero Section
+4. Pastor's Message
+5. Service Schedule
+6. Events Section
+7. Call-to-Action Sections
+8. Footer (loaded from partial)
+
+CUSTOMIZATION:
+- Hero text: Update welcome message in hero section
+- Pastor info: Update pastor's greeting and signature
+- Service times: Update schedule in service-schedule section
+- Events: Update upcoming events in events grid
+- SEO: Update meta description and keywords in head
+
+============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ============================================================================
+       HTML HEAD SECTION - SEO and Page Setup
+       ============================================================================ -->
+  
+  <!-- Basic HTML5 document setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags - Update these for better search engine visibility -->
   <meta name="description" content="Welcome to Broad Street Missionary Baptist Church in Birmingham, AL. Join our loving church family for worship, fellowship, and spiritual growth. Sunday services at 11 AM." />
   <meta name="keywords" content="Baptist church Birmingham, Christian fellowship, Bible study, Sunday worship, Pastor Rick Owens" />
+  
+  <!-- Performance Optimization - Preload critical resources -->
   <link rel="preload" href="css/style.css" as="style">
   <link rel="preload" href="js/main.js" as="script">
+  
+  <!-- Page Title (appears in browser tab) -->
   <title>Home | Broad Street M.B. Church</title>
+  
+  <!-- Stylesheet Links -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
+  <!-- ============================================================================
+       NAVIGATION - Loaded from Partial
+       ============================================================================ -->
+  <!-- Navigation content loaded dynamically by JavaScript from partials/nav.html -->
   <div id="site-nav"></div>
 
+  <!-- ============================================================================
+       HERO SECTION - Welcome Message
+       ============================================================================ -->
   <header class="hero">
     <div class="hero-text">
+      <!-- Main welcome heading -->
       <h1>Welcome to Broad Street</h1>
+      <!-- Church tagline/mission statement -->
       <p>A Church Family Built On Love For God And For ALL Our Brothers And Sisters In Christ</p>
     </div>
   </header>
 
+  <!-- ============================================================================
+       MAIN CONTENT SECTION - Pastor's Message
+       ============================================================================ -->
   <section class="section">
     <div class="container">
+      <!-- Section heading -->
       <h2>From the Pastor's Desk</h2>
+      
+      <!-- Brief church introduction -->
       <p>I and the entire membership of the Broad Street Missionary Baptist Church in Historic Birmingham, Alabama greet you in the name of our Lord and Savior Jesus Christ. We thank you for stopping by our website. We are a church family built on love for God and for ALL our brothers and sisters in Christ. Please feel free to email us for any information you may need, and we will gladly respond with assistance.</p>
       
+      <!-- Pastor's personal greeting -->
       <div class="pastor-greeting">
         <h3>Greetings From Pastor Rick (Rickey) Owens</h3>
         <p>It is with a great sense of joy, excitement and faith that I say hello to all of my Christian friends! The words are truly inexpressible as I attempt to convey to you the deep sense of thanksgiving for this providential promotion that God through Jesus has bestowed upon me for being selected as the new pastor of Broad Street Missionary Baptist Church!</p>
         
         <p>God has engendered within me what I believe are exciting and innovative ideas on how together, we can work collaboratively and harmoniously to advance a promising agenda for the church and the comprehensive community that we serve. These ideas include plans for church growth in all areas of ministry such as youth and young adults, peer mentoring, promotions and public relations, economic development, affordable housing, educational projects and most certainly neighborhood revitalization and personal empowerment initiatives!</p>
         
+        <!-- Bible verse quote -->
         <p><em>"The harvest is plentiful, but the laborers are few."</em> We know that some plant, some water, and some cultivate, but truly it is God through Jesus who gives the increase!</p>
         
+        <!-- Pastor's signature -->
         <p class="signature">Yours In Christ,<br><strong>Pastor Rick (Rickey) Owens</strong></p>
       </div>
       
+      <!-- ============================================================================
+           SERVICE SCHEDULE SECTION
+           ============================================================================ -->
       <div class="service-schedule">
         <h3>Weekly Service Schedule</h3>
         <div class="schedule-grid">
+          <!-- Sunday School Service -->
           <div class="service-item">
             <h4>Sunday School</h4>
             <p class="time">9:30 AM</p>
           </div>
+          <!-- Main Sunday Worship Service -->
           <div class="service-item">
             <h4>Sunday Worship</h4>
             <p class="time">11:00 AM</p>
           </div>
+          <!-- Midweek Bible Study -->
           <div class="service-item">
             <h4>Wednesday Bible Study</h4>
             <p class="time">6:00 PM</p>
@@ -55,9 +130,13 @@
         </div>
       </div>
       
+      <!-- ============================================================================
+           UPCOMING EVENTS SECTION
+           ============================================================================ -->
       <div class="upcoming-events">
         <h3>Upcoming Events</h3>
         <div class="events-grid">
+          <!-- Event 1 - Update with actual event information -->
           <div class="event-card">
             <div class="event-date">
               <span class="event-month">TBD</span>
@@ -71,6 +150,7 @@
             </div>
           </div>
           
+          <!-- Event 2 - Update with actual event information -->
           <div class="event-card">
             <div class="event-date">
               <span class="event-month">TBD</span>
@@ -84,6 +164,7 @@
             </div>
           </div>
           
+          <!-- Event 3 - Update with actual event information -->
           <div class="event-card">
             <div class="event-date">
               <span class="event-month">TBD</span>
@@ -97,21 +178,62 @@
             </div>
           </div>
         </div>
+        
+        <!-- View All Events Button -->
         <div style="text-align: center; margin-top: 2rem;">
           <a href="events.html" class="btn">View All Events</a>
         </div>
       </div>
       
+      <!-- ============================================================================
+           CALL-TO-ACTION SECTION
+           ============================================================================ -->
       <div class="cta-section">
         <h3>Join Us Online</h3>
         <p>Use our form to sign up and receive the Zoom link to watch online services.</p>
+        <!-- Primary action buttons -->
         <a href="connection-card.html" class="btn">Get Zoom Link</a>
         <a href="give.html" class="btn">Give Online</a>
       </div>
     </div>
   </section>
 
+  <!-- ============================================================================
+       FOOTER - Loaded from Partial
+       ============================================================================ -->
+  <!-- Footer content loaded dynamically by JavaScript from partials/footer.html -->
   <div id="site-footer"></div>
+  
+  <!-- ============================================================================
+       JAVASCRIPT - Main functionality
+       ============================================================================ -->
+  <!-- Load main JavaScript file for navigation and interactions -->
   <script src="js/main.js"></script>
 </body>
 </html>
+
+<!--
+============================================================================
+END OF HOME PAGE
+============================================================================
+
+NOTES FOR CUSTOMIZATION:
+1. Hero Section: Update welcome message and tagline
+2. Pastor's Message: Replace with current pastor's greeting
+3. Service Schedule: Update times for your church services
+4. Events: Replace placeholder events with actual upcoming events
+5. Call-to-Action: Update button links and messaging as needed
+
+MAINTENANCE NOTES:
+- Events section should be updated regularly
+- Pastor's message may need periodic updates
+- Service times should be verified for accuracy
+- Contact information is maintained in the footer partial
+
+SEO OPTIMIZATION:
+- Update meta description and keywords in the head section
+- Ensure all images have proper alt text
+- Keep content fresh and relevant for better search rankings
+
+============================================================================
+-->
