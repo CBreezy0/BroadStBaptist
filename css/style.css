@@ -535,7 +535,7 @@ ul {
 .mobile-nav-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 1.2rem 1.2rem 0.9rem 1.2rem;
   border-bottom: 1px solid #eee;
   flex-shrink: 0;
@@ -544,15 +544,6 @@ ul {
   z-index: 2001;
 }
 
-.mobile-nav-header .nav-logo {
-  padding-left: 0;
-  height: auto;
-}
-
-.mobile-nav-header .nav-logo img {
-  height: 60px;
-  max-width: 200px;
-}
 .mobile-nav-close {
   background: none;
   border: none;
