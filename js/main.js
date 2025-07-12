@@ -4,9 +4,7 @@ const navLinksData = [
     { text: 'Leadership', url: 'leadership.html' },
     { text: 'Contact', url: 'contact.html' }
   ]},
-  { text: 'Resources', submenu: [
-    { text: 'Connection Card', url: 'connection-card.html' }
-  ]},
+  { text: 'Connection Card', url: 'connection-card.html' },
   { text: 'Messages', url: 'messages.html' },
   { text: 'Ministries', submenu: [
     { text: 'All Ministries', url: 'ministries.html' },
