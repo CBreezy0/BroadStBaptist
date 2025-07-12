@@ -236,7 +236,7 @@ ul {
   background-color: var(--white);
   border-bottom: 1px solid #eee;
   z-index: 999;
-  padding: 0;
+  padding: 0 2rem 0 0;
   min-height: 100px;
   display: flex;
   align-items: center;
@@ -252,6 +252,7 @@ ul {
   height: 100px;
   flex-shrink: 0;
   padding-left: 4rem;
+  margin-left: 2rem;
 }
 
 .mobile-logo {
