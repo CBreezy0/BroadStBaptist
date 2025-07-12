@@ -26,9 +26,7 @@ const navLinksData = [
   ]},
   { text: 'Next Steps', submenu: [
     { text: 'Discover', url: 'discover.html' },
-    { text: 'Baptism', url: 'baptism.html' },
-    { text: 'Groups', url: 'groups.html' },
-    { text: 'Serve Teams', url: 'serve-teams.html' }
+    { text: 'Baptism', url: 'baptism.html' }
   ]},
   { text: 'Give', url: 'give.html' },
   { text: 'Events', url: 'events.html' }
