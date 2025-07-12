@@ -1369,12 +1369,13 @@ h2 {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(52,22,57,0.08);
   border: 1px solid #f0f0f0;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.25s cubic-bezier(.22,1,.36,1);
 }
 
 .ministry-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(52,22,57,0.12);
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 8px 32px rgba(52,22,57,0.18), 0 1.5px 6px rgba(52,22,57,0.10);
+  z-index: 2;
 }
 
 .ministry-card h3 {
@@ -2037,55 +2038,39 @@ h2 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .prayer-request-section {
-    padding: 2rem 1.5rem;
-    margin: 2rem 0;
-  }
-  
-  .prayer-request-section h3 {
-    font-size: 1.5rem;
-  }
-  
-  .prayer-request-section h3 i {
-    font-size: 1.3rem;
-  }
-  
-  .prayer-request-form input,
-  .prayer-request-form select,
-  .prayer-request-form textarea {
-    padding: 0.7rem;
-    font-size: 0.95rem;
-  }
-  
-  .scripture-encouragement {
-    padding: 1rem;
-    margin: 1.5rem 0;
-  }
-  
-  .scripture-encouragement p {
-    font-size: 1rem;
-  }
-  
-  .btn-prayer {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
+/* =====================
+   Ministry Card Animation
+   ===================== */
+.ministry-card {
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.25s cubic-bezier(.22,1,.36,1);
+}
+.ministry-card:hover, .ministry-card:focus-within {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 8px 32px rgba(52,22,57,0.18), 0 1.5px 6px rgba(52,22,57,0.10);
+  z-index: 2;
 }
 
-@media (max-width: 480px) {
-  .prayer-request-section {
-    padding: 1.5rem 1rem;
-  }
-  
-  .prayer-request-section h3 {
-    font-size: 1.3rem;
-  }
-  
-  .scripture-encouragement p {
-    font-size: 0.95rem;
+/* =====================
+   Pastor Pull-Quote Styling
+   ===================== */
+.pastor-pull-quote {
+  background: linear-gradient(90deg, #ffc62f 0%, #fffbe6 100%);
+  color: #341639;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-left: 6px solid #ffc62f;
+  border-radius: 8px;
+  margin: 2rem 0 1.5rem 0;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(52,22,57,0.07);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .pastor-pull-quote {
+    font-size: 1rem;
+    padding: 1rem 0.7rem;
   }
 }
-
-/* ===== EXISTING CODE CONTINUES ===== */

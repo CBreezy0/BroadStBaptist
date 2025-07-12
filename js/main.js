@@ -187,3 +187,38 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
   }
 });
+
+// ========== SERVICE COUNTDOWN TIMER (Footer) ========== //
+(function() {
+  function getNextSundayAt(hour, minute) {
+    const now = new Date();
+    const result = new Date(now);
+    result.setDate(now.getDate() + ((7 - now.getDay()) % 7 || 7)); // Next Sunday
+    result.setHours(hour, minute, 0, 0);
+    if (result < now) {
+      result.setDate(result.getDate() + 7);
+    }
+    return result;
+  }
+  function updateCountdown() {
+    const countdown = document.getElementById('service-countdown');
+    if (!countdown) return;
+    const nextService = getNextSundayAt(11, 0); // 11:00 AM
+    const now = new Date();
+    const diff = nextService - now;
+    if (diff <= 0) {
+      countdown.textContent = 'Service is happening now!';
+      return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+    let msg = 'Next Service: ';
+    if (days > 0) msg += days + 'd ';
+    msg += hours + 'h ' + minutes + 'm ' + seconds + 's';
+    countdown.textContent = msg;
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+})();

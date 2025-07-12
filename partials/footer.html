@@ -35,7 +35,7 @@ CUSTOMIZATION:
   <div class="container footer-grid">
     
     <!-- ============================================================================
-         LEFT SECTION: Church Location
+         LEFT SECTION: Church Location (with embedded map)
          ============================================================================ -->
     <div class="footer-section">
       <h3>Location</h3>
@@ -43,6 +43,11 @@ CUSTOMIZATION:
         121 Morris Ave<br>
         Birmingham, AL 35204
       </p>
+      <div class="footer-map" style="margin-top:1rem; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(52,22,57,0.08);">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.857282964019!2d-86.8181236848136!3d33.5162049807517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88891be1e2e2b1e7%3A0x7e2e2e2e2e2e2e2e!2s121%20Morris%20Ave%2C%20Birmingham%2C%20AL%2035204!5e0!3m2!1sen!2sus!4v1689000000000!5m2!1sen!2sus"
+          width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Church Location Map"></iframe>
+      </div>
     </div>
     
     <!-- ============================================================================
@@ -59,6 +64,10 @@ CUSTOMIZATION:
       <a href="https://youtube.com" target="_blank" aria-label="Subscribe to our YouTube channel">
         <i class="fab fa-youtube"></i>
       </a>
+      <!-- Service Countdown Timer -->
+      <div class="footer-timer" style="margin-top:1.2rem;">
+        <span id="service-countdown" style="font-size:1.05rem; color:#ffc62f; font-weight:600;"></span>
+      </div>
     </div>
     
     <!-- ============================================================================
