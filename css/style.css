@@ -413,17 +413,6 @@ ul {
   align-items: center;
 }
 
-/* Mobile navbar container fix */
-@media (max-width: 768px) {
-  .top-navbar .container {
-    padding: 0 1rem;
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
 .nav-flex {
   display: flex;
   align-items: center;
@@ -434,13 +423,32 @@ ul {
   gap: 2rem;
 }
 
-/* Mobile nav-flex adjustments */
+/* ============================================================================
+   MOBILE NAVIGATION FIXES - Prevent Desktop Rules from Bleeding Through
+   ============================================================================ */
 @media (max-width: 768px) {
+  /* Force proper mobile layout - override any desktop flex rules */
+  .top-navbar .container,
+  .nav-flex {
+    justify-content: space-between !important;
+    padding: 0 1rem !important;
+  }
+  
   .nav-flex {
     height: 70px;
-    padding: 0;
-    justify-content: space-between;
     width: 100%;
+  }
+  
+  /* Ensure only one logo is visible - hide any desktop logo containers */
+  .desktop-nav .nav-logo {
+    display: none !important;
+  }
+  
+  /* Ensure mobile logo is properly positioned */
+  .mobile-nav .nav-logo {
+    display: flex !important;
+    align-items: center;
+    height: 70px;
   }
 }
 
@@ -575,6 +583,10 @@ ul {
   color: var(--black);
 }
 
+/* ============================================================================
+   HAMBURGER MENU ICON - Proper Structure and Styling
+   ============================================================================ */
+
 /* Hamburger icon - hidden on desktop, shown on mobile */
 .menu-toggle {
   background: none;
@@ -588,18 +600,26 @@ ul {
   height: 44px;
   border-radius: 8px;
   transition: background-color 0.2s;
+  position: relative;
 }
+
 .menu-toggle:hover,
 .menu-toggle:focus {
   background-color: rgba(52, 22, 57, 0.1);
 }
+
+/* Hamburger icon structure - requires <span class="menu-icon"></span> in HTML */
 .menu-toggle .menu-icon {
   width: 22px; 
-  height: 14px;
-  display: inline-block;
+  height: 2px;
+  display: block;
   position: relative;
+  background: var(--purple);
+  border-radius: 1px;
+  transition: all 0.3s;
 }
-.menu-toggle .menu-icon,
+
+/* Top and bottom bars created with pseudo-elements */
 .menu-toggle .menu-icon:before,
 .menu-toggle .menu-icon:after {
   content: "";
@@ -611,17 +631,31 @@ ul {
   border-radius: 1px;
   transition: all 0.3s;
 }
+
 .menu-toggle .menu-icon:before {
-  top: 0;
-}
-.menu-toggle .menu-icon:after {
-  top: 12px;
+  top: -6px;  /* Position above middle bar */
 }
 
-/* Overlay menu */
+.menu-toggle .menu-icon:after {
+  top: 6px;   /* Position below middle bar */
+}
+
+/* Show hamburger menu on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* ============================================================================
+   MOBILE OVERLAY MENU - Full Screen Navigation
+   ============================================================================ */
+
+/* Overlay menu - hidden by default */
 .mobile-nav-overlay {
   position: fixed;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: var(--white);
@@ -630,14 +664,19 @@ ul {
   flex-direction: column;
   overflow: hidden;
 }
+
+/* Show overlay when active */
 .mobile-nav-overlay.active {
   display: flex;
   animation: fadeIn 0.3s;
 }
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* Overlay header with close button */
 .mobile-nav-header {
   display: flex;
   align-items: center;
@@ -648,14 +687,28 @@ ul {
   background: var(--white);
   position: relative;
   z-index: 2001;
+  min-height: 70px;  /* Match main navbar height */
 }
 
+/* Close button styling */
 .mobile-nav-close {
   background: none;
   border: none;
   font-size: 2.5rem;
   color: var(--purple);
   cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav-close:hover,
+.mobile-nav-close:focus {
+  background-color: rgba(52, 22, 57, 0.1);
 }
 
 .mobile-nav-list {
@@ -717,14 +770,31 @@ ul {
   font-size: 2rem;
 }
 
+/* ============================================================================
+   MOBILE NAVIGATION VISIBILITY CONTROLS
+   ============================================================================ */
+
 /* Hide desktop nav on mobile and ensure logo visibility */
 @media (max-width: 768px) {
+  /* Hide all desktop navigation elements */
   .top-navbar .nav-links,
-  .nav-cta {
+  .nav-cta,
+  .desktop-nav {
     display: none !important;
   }
+  
+  /* Show mobile elements */
   .menu-toggle {
-    display: flex;
+    display: flex !important;
+  }
+  
+  .mobile-nav {
+    display: flex !important;
+  }
+  
+  /* Ensure navbar height is consistent */
+  .top-navbar {
+    min-height: 70px;
   }
 }
 
@@ -761,6 +831,11 @@ ul {
   }
 }
 
+/* ============================================================================
+   LOGO STYLING - Single Logo System for Desktop and Mobile
+   ============================================================================ */
+
+/* Base logo container - shared styles */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -778,36 +853,34 @@ ul {
   object-fit: contain;
 }
 
-/* Mobile navbar fixes - only apply on mobile */
+/* Desktop logo positioning */
+.desktop-nav .nav-logo {
+  margin-left: 2rem;  /* Extra space from edge on desktop */
+}
+
+/* Mobile logo adjustments */
 @media (max-width: 768px) {
   .nav-logo {
-    padding-left: 0;
     height: 70px;
+    padding-left: 0;
+    margin-left: 0;  /* Remove desktop margin */
   }
   
   .nav-logo img {
     height: 60px;
     max-width: 180px;
   }
-  
-  .top-navbar {
-    min-height: 70px;
-  }
 }
 
-/* Small mobile */
+/* Small mobile adjustments */
 @media (max-width: 500px) {
-  .container {
-    padding: 0 1rem;
-  }
-  
   .nav-logo img {
     height: 50px;
     max-width: 150px;
   }
 }
 
-/* Extra small mobile */
+/* Extra small mobile adjustments */
 @media (max-width: 375px) {
   .nav-logo img {
     height: 45px;
