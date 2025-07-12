@@ -18,12 +18,12 @@ const navLinksData = [
     { text: 'All Ministries', url: 'ministries.html' },
     { text: 'Children\'s Ministry', url: 'kids.html' },
     { text: 'Student Ministry', url: 'students.html' },
-    { text: 'Men\'s Ministry', url: 'ministries.html#mens-ministry' },
-    { text: 'Women\'s Ministry', url: 'ministries.html#womens-ministry' },
+    { text: 'Men\'s Ministry', url: 'mens-ministry.html' },
+    { text: 'Women\'s Ministry', url: 'womens-ministry.html' },
     { text: 'Worship Ministry', url: 'worship.html' },
-    { text: 'Care Ministry', url: 'ministries.html#care-ministry' },
-    { text: 'Media & Technology', url: 'ministries.html#media-tech-ministry' },
-    { text: 'Missions & Outreach', url: 'ministries.html#missions-ministry' }
+    { text: 'Care Ministry', url: 'care-ministry.html' },
+    { text: 'Media & Technology', url: 'media-ministry.html' },
+    { text: 'Missions & Outreach', url: 'missions-ministry.html' }
   ]},
   { text: 'Next Steps', submenu: [
     { text: 'Discover', url: 'discover.html' },
