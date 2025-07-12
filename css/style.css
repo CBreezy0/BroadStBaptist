@@ -1883,4 +1883,209 @@ h2 {
   }
 }
 
+/* ============================================================================
+   PRAYER REQUEST FORM STYLES
+   ============================================================================ */
+
+/* Prayer request section container */
+.prayer-request-section {
+  background: linear-gradient(135deg, var(--purple), #220d29);
+  color: var(--white);
+  padding: 3rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  box-shadow: 0 8px 24px rgba(52,22,57,0.15);
+}
+
+.prayer-request-section h3 {
+  color: var(--yellow);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.prayer-request-section h3 i {
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.prayer-request-section > p {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Prayer request form styling */
+.prayer-request-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.prayer-request-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.prayer-request-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--yellow);
+  font-size: 1rem;
+}
+
+.prayer-request-form input,
+.prayer-request-form select,
+.prayer-request-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  transition: border-color 0.3s, background-color 0.3s;
+  font-family: inherit;
+}
+
+.prayer-request-form input::placeholder,
+.prayer-request-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.prayer-request-form input:focus,
+.prayer-request-form select:focus,
+.prayer-request-form textarea:focus {
+  outline: none;
+  border-color: var(--yellow);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.prayer-request-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.prayer-request-form select {
+  cursor: pointer;
+}
+
+.prayer-request-form select option {
+  background: var(--purple);
+  color: var(--white);
+}
+
+/* Scripture encouragement styling */
+.scripture-encouragement {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem 0;
+  border-left: 4px solid var(--yellow);
+}
+
+.scripture-encouragement p {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.scripture-encouragement cite {
+  color: var(--yellow);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Prayer submit button styling */
+.btn-prayer {
+  background: var(--yellow) !important;
+  color: var(--purple) !important;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(255, 198, 47, 0.3);
+}
+
+.btn-prayer:hover,
+.btn-prayer:focus {
+  background: #e0b200 !important;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 198, 47, 0.4);
+}
+
+.btn-prayer i {
+  margin-right: 0.5rem;
+}
+
+/* Privacy notice styling */
+.privacy-notice {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.privacy-notice p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .prayer-request-section {
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .prayer-request-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .prayer-request-section h3 i {
+    font-size: 1.3rem;
+  }
+  
+  .prayer-request-form input,
+  .prayer-request-form select,
+  .prayer-request-form textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+  
+  .scripture-encouragement {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .scripture-encouragement p {
+    font-size: 1rem;
+  }
+  
+  .btn-prayer {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prayer-request-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .prayer-request-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .scripture-encouragement p {
+    font-size: 0.95rem;
+  }
+}
+
 /* ===== EXISTING CODE CONTINUES ===== */

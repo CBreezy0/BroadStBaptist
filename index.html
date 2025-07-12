@@ -186,6 +186,78 @@ CUSTOMIZATION:
       </div>
       
       <!-- ============================================================================
+           PRAYER REQUEST SECTION
+           ============================================================================ -->
+      <div class="prayer-request-section">
+        <h3><i class="fas fa-praying-hands"></i> Submit a Prayer Request</h3>
+        <p>We believe in the power of prayer. Share your prayer request with our church family, and we will lift you up in prayer.</p>
+        
+        <form class="prayer-request-form" action="#" method="POST">
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="prayer-name">Your Name (Optional)</label>
+            <input type="text" id="prayer-name" name="name" placeholder="Enter your name">
+          </div>
+          
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="prayer-email">Email (Optional)</label>
+            <input type="email" id="prayer-email" name="email" placeholder="Enter your email">
+          </div>
+          
+          <!-- Prayer Request Type -->
+          <div class="form-group">
+            <label for="prayer-type">Prayer Request Type</label>
+            <select id="prayer-type" name="prayer-type">
+              <option value="">Select a category</option>
+              <option value="healing">Healing & Health</option>
+              <option value="family">Family & Relationships</option>
+              <option value="financial">Financial Needs</option>
+              <option value="spiritual">Spiritual Growth</option>
+              <option value="guidance">Guidance & Decisions</option>
+              <option value="thanksgiving">Thanksgiving & Praise</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <!-- Privacy Options -->
+          <div class="form-group">
+            <label for="prayer-privacy">Privacy Preference</label>
+            <select id="prayer-privacy" name="privacy">
+              <option value="confidential">Keep confidential (pastors only)</option>
+              <option value="prayer-team">Share with prayer team</option>
+              <option value="public">May be shared publicly (first name only)</option>
+            </select>
+          </div>
+          
+          <!-- Prayer Request Details -->
+          <div class="form-group">
+            <label for="prayer-request">Prayer Request *</label>
+            <textarea id="prayer-request" name="prayer-request" rows="4" 
+                      placeholder="Please share your prayer request here..." required></textarea>
+          </div>
+          
+          <!-- Scripture Encouragement -->
+          <div class="scripture-encouragement">
+            <p><em>"And this is the confidence that we have toward him, that if we ask anything according to his will he hears us."</em></p>
+            <cite>1 John 5:14 ESV</cite>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="form-group">
+            <button type="submit" class="btn btn-prayer">
+              <i class="fas fa-paper-plane"></i> Submit Prayer Request
+            </button>
+          </div>
+          
+          <!-- Privacy Notice -->
+          <div class="privacy-notice">
+            <p><small>Your prayer request will be handled with care and respect according to your privacy preferences. Our pastoral staff and prayer team are committed to confidentiality.</small></p>
+          </div>
+        </form>
+      </div>
+      
+      <!-- ============================================================================
            CALL-TO-ACTION SECTION
            ============================================================================ -->
       <div class="cta-section">
