@@ -2,7 +2,7 @@ const navLinksData = [
   { text: 'About', submenu: [
     { text: 'Who We Are', url: 'who-we-are.html' },
     { text: 'Leadership', url: 'leadership.html' },
-    { text: 'Careers', url: 'careers.html' },
+    { text: 'Volunteer', url: 'careers.html' },
     { text: 'Contact', url: 'contact.html' }
   ]},
   { text: 'Resources', submenu: [
