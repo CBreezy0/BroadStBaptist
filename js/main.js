@@ -1,6 +1,6 @@
 const navLinksData = [
   { text: 'About', submenu: [
-    { text: 'Who We Are', url: 'who-we-are.html' },
+    { text: 'History', url: 'history.html' },
     { text: 'Leadership', url: 'leadership.html' },
     { text: 'Contact', url: 'contact.html' }
   ]},
