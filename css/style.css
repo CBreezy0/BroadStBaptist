@@ -92,7 +92,7 @@ ul {
   align-items: center;
   height: 100px;
   flex-shrink: 0;
-  padding-left: 0;
+  padding-left: 1rem;
 }
 
 .nav-logo img {
