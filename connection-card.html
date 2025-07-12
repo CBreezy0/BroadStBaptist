@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Broad Street Missionary Baptist Church</title>
+  <title>Connection Card | Broad Street M.B. Church</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -19,35 +19,193 @@
 
   <section class="section">
     <div class="container">
-      <h2>Join Us Online</h2>
-      <p>Use this form to sign up and receive the Zoom link to watch our online services.</p>
-      
-      <div class="connection-form">
-        <form class="online-signup-form">
-          <div class="form-group">
-            <label for="firstName">First Name *</label>
-            <input type="text" id="firstName" name="firstName" required>
+      <div class="welcome-message">
+        <h2>Welcome to Broad Street Missionary Baptist Church!</h2>
+        <p>We're so glad you're here! Whether you're visiting for the first time or you've been part of our church family for years, we'd love to connect with you and learn how we can serve you better. Please take a moment to fill out this connection card so we can stay in touch and help you get more involved in our church community.</p>
+        
+        <div class="scripture-verse">
+          <p><em>"And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching."</em></p>
+          <cite>Hebrews 10:24-25 NIV</cite>
+        </div>
+      </div>
+
+      <div class="connection-card-form">
+        <form class="connection-form">
+          <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="address">Mailing Address (Optional)</label>
+              <textarea id="address" name="address" rows="3" placeholder="Street Address, City, State, ZIP Code"></textarea>
+            </div>
           </div>
-          
-          <div class="form-group">
-            <label for="lastName">Last Name *</label>
-            <input type="text" id="lastName" name="lastName" required>
+
+          <div class="form-section">
+            <h3>Visit Status</h3>
+            <div class="form-group">
+              <label for="visitStatus">How would you describe your connection with us? *</label>
+              <select id="visitStatus" name="visitStatus" required>
+                <option value="">Please select...</option>
+                <option value="first-time">First Time Guest</option>
+                <option value="returning-guest">Returning Guest</option>
+                <option value="regular-attender">Regular Attender</option>
+                <option value="member">Member</option>
+                <option value="online-only">Online Viewer</option>
+              </select>
+            </div>
           </div>
-          
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
+
+          <div class="form-section">
+            <h3>Areas of Interest & Involvement</h3>
+            <p>What ministries or activities interest you? (Check all that apply)</p>
+            <div class="checkbox-grid">
+              <div class="checkbox-item">
+                <input type="checkbox" id="childrens-ministry" name="interests" value="children">
+                <label for="childrens-ministry">Children's Ministry</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="student-ministry" name="interests" value="students">
+                <label for="student-ministry">Student Ministry</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="worship-team" name="interests" value="worship">
+                <label for="worship-team">Worship Team</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="mens-ministry" name="interests" value="men">
+                <label for="mens-ministry">Men's Ministry</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="womens-ministry" name="interests" value="women">
+                <label for="womens-ministry">Women's Ministry</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="care-ministry" name="interests" value="care">
+                <label for="care-ministry">Care Ministry</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="missions" name="interests" value="missions">
+                <label for="missions">Missions & Outreach</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="media-tech" name="interests" value="media">
+                <label for="media-tech">Media & Technology</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="bible-study" name="interests" value="bible-study">
+                <label for="bible-study">Bible Study Groups</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="prayer-team" name="interests" value="prayer">
+                <label for="prayer-team">Prayer Team</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="community-service" name="interests" value="service">
+                <label for="community-service">Community Service</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="discipleship" name="interests" value="discipleship">
+                <label for="discipleship">Discipleship & Mentoring</label>
+              </div>
+            </div>
           </div>
-          
-          <button type="submit" class="btn">Submit</button>
+
+          <div class="form-section">
+            <h3>Prayer Requests & Comments</h3>
+            <div class="form-group">
+              <label for="prayerRequests">How can we pray for you? Do you have any questions or comments?</label>
+              <textarea id="prayerRequests" name="prayerRequests" rows="4" placeholder="Share any prayer needs, questions about our church, or comments you'd like us to know..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Follow-Up Preference</h3>
+            <p>How would you prefer we contact you? (Check all that apply)</p>
+            <div class="checkbox-row">
+              <div class="checkbox-item">
+                <input type="checkbox" id="contact-email" name="contactMethod" value="email">
+                <label for="contact-email">Email</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="contact-phone" name="contactMethod" value="phone">
+                <label for="contact-phone">Phone Call</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="contact-text" name="contactMethod" value="text">
+                <label for="contact-text">Text Message</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="contact-mail" name="contactMethod" value="mail">
+                <label for="contact-mail">Mail</label>
+              </div>
+              
+              <div class="checkbox-item">
+                <input type="checkbox" id="no-contact" name="contactMethod" value="none">
+                <label for="no-contact">No follow-up needed</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-large">Connect with Us</button>
         </form>
       </div>
       
-      <div class="additional-info">
-        <h3>Get Connected</h3>
-        <p>We're excited to have you join our church family online! After submitting this form, you'll receive an email with the Zoom link and instructions for joining our services.</p>
+      <div class="connection-info">
+        <h3>What Happens Next?</h3>
+        <p>After you submit your connection card, here's what you can expect:</p>
+        <ul>
+          <li><strong>Personal Follow-Up:</strong> One of our pastors or ministry leaders will reach out based on your preferences</li>
+          <li><strong>Welcome Package:</strong> If you're new, we'll send you information about our church and upcoming events</li>
+          <li><strong>Ministry Connection:</strong> We'll help connect you with the ministries and groups you expressed interest in</li>
+          <li><strong>Prayer Support:</strong> Your prayer requests will be shared with our prayer team (with your permission)</li>
+        </ul>
         
-        <p>If you have any questions or need assistance, please don't hesitate to contact us at <a href="mailto:broadstreet121@gmail.com">broadstreet121@gmail.com</a> or call us at <a href="tel:+12052511372">(205) 251-1372</a>.</p>
+        <div class="contact-options">
+          <h4>Need Immediate Assistance?</h4>
+          <p>If you have urgent questions or need immediate help, please contact us directly:</p>
+          <div class="contact-methods">
+            <p><strong>Email:</strong> <a href="mailto:broadstreet121@gmail.com">broadstreet121@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+12052511372">(205) 251-1372</a></p>
+            <p><strong>Address:</strong> 121 Broad Street, Gardendale, AL 35071</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
