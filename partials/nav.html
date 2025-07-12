@@ -28,12 +28,13 @@
 <!-- CLEAN TOP NAVBAR with MOBILE OVERLAY MENU -->
 
 <nav class="top-navbar">
-  <div class="nav-logo">
-    <a href="index.html">
-      <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo">
-    </a>
-  </div>
   <div class="container nav-flex">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span style="display:none; font-weight:bold; color:var(--purple); font-size:1.2rem;">Broad Street Baptist</span>
+      </a>
+    </div>
     <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
       <span class="menu-icon"></span>
     </button>
@@ -84,7 +85,8 @@
     <div class="mobile-nav-header">
       <div class="nav-logo">
         <a href="index.html">
-          <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo">
+          <img src="assets/logo.png" alt="Broad Street Missionary Baptist Church logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span style="display:none; font-weight:bold; color:var(--purple); font-size:1rem;">Broad Street Baptist</span>
         </a>
       </div>
       <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">&times;</button>
