@@ -923,6 +923,53 @@ ul {
   }
 }
 
+/* ============================================================================
+   HERO IMAGE STYLES
+   ============================================================================ */
+
+/* Hero image container */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Welcome hero image */
+.hero-welcome-image {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(52, 22, 57, 0.15);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.hero-welcome-image:hover {
+  transform: scale(1.02);
+}
+
+/* Mobile responsiveness for hero image */
+@media (max-width: 768px) {
+  .hero-image-container {
+    padding: 1rem;
+  }
+  
+  .hero-welcome-image {
+    max-height: 300px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-welcome-image {
+    max-height: 250px;
+  }
+}
+
 /* ============= SECTION LAYOUT ============= */
 .section {
   width: 100%;
