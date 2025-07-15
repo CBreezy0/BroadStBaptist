@@ -2294,63 +2294,204 @@ h2 {
 }
 
 /* ============================================================================
-   INTERACTIVE MAP STYLES
+   MINISTRY SIGNUP FORM STYLES
    ============================================================================ */
 
-/* Interactive map placeholder styling */
-.map-placeholder {
+/* Get involved section */
+.get-involved {
   background: linear-gradient(135deg, var(--purple), #220d29);
   color: var(--white);
-  padding: 3rem;
+  padding: 4rem 3rem;
+  border-radius: 20px;
+  margin: 4rem 0;
   text-align: center;
+  box-shadow: 0 8px 30px rgba(52, 22, 57, 0.15);
+}
+
+.get-involved h3 {
+  color: var(--yellow);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.get-involved p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ministry contact form container */
+.ministry-contact-form {
+  background: var(--white);
+  padding: 3rem;
   border-radius: 15px;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.map-content {
-  max-width: 400px;
+/* Ministry signup form styling */
+.ministry-signup-form {
+  display: grid;
+  gap: 1.5rem;
 }
 
-.map-content i.fa-map-marker-alt {
-  font-size: 3rem;
-  color: var(--yellow);
-  margin-bottom: 1rem;
+.ministry-signup-form .form-group {
+  margin-bottom: 0;
 }
 
-.map-content h4 {
-  color: var(--yellow);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.map-content p {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-.map-btn {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 1rem 1.5rem;
-  background: var(--yellow);
-  color: var(--purple);
-  text-decoration: none;
-  border-radius: 8px;
+.ministry-signup-form label {
+  display: block;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  transition: all 0.3s;
+  color: var(--purple);
+  font-size: 1rem;
+}
+
+.ministry-signup-form input,
+.ministry-signup-form select,
+.ministry-signup-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--black);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.ministry-signup-form input:focus,
+.ministry-signup-form select:focus,
+.ministry-signup-form textarea:focus {
+  outline: none;
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255, 198, 47, 0.2);
+  transform: translateY(-1px);
+}
+
+.ministry-signup-form input::placeholder,
+.ministry-signup-form textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.ministry-signup-form select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 3rem;
+  appearance: none;
+}
+
+.ministry-signup-form select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffc62f' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.ministry-signup-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Required field styling */
+.ministry-signup-form label:after {
+  content: "";
+}
+
+.ministry-signup-form label[for="fullName"]:after,
+.ministry-signup-form label[for="email"]:after,
+.ministry-signup-form label[for="ministry"]:after {
+  content: " *";
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Submit button styling */
+.ministry-signup-form .btn {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--yellow), #e8b625);
+  color: var(--purple);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 198, 47, 0.3);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.map-btn:hover {
-  background: #e8b625;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 198, 47, 0.4);
+.ministry-signup-form .btn:hover,
+.ministry-signup-form .btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 198, 47, 0.4);
+  background: linear-gradient(135deg, #e8b625, var(--yellow));
 }
 
-.map-btn i {
-  margin-right: 0.5rem;
+.ministry-signup-form .btn:active {
+  transform: translateY(-1px);
+}
+
+/* Form validation styles */
+.ministry-signup-form input:invalid:not(:placeholder-shown),
+.ministry-signup-form select:invalid:not(:placeholder-shown) {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.ministry-signup-form input:valid,
+.ministry-signup-form select:valid {
+  border-color: #27ae60;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .get-involved {
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+  }
+  
+  .get-involved h3 {
+    font-size: 2rem;
+  }
+  
+  .get-involved p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .ministry-contact-form {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ministry-signup-form .btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .get-involved {
+    padding: 2rem 1.5rem;
+  }
+  
+  .get-involved h3 {
+    font-size: 1.8rem;
+  }
+  
+  .ministry-contact-form {
+    padding: 1.5rem 1rem;
+  }
 }
