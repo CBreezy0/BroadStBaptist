@@ -1907,7 +1907,7 @@ h2 {
 /* Contact details section */
 .contact-details {
   background: var(--white);
-  padding: 2.5rem;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
   border-radius: 15px;
   box-shadow: 0 6px 25px rgba(52, 22, 57, 0.08);
   border-left: 5px solid var(--yellow);
@@ -1934,7 +1934,7 @@ h2 {
 }
 
 .contact-list li {
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   border-bottom: 1px solid #f0f0f0;
   display: flex;
   align-items: center;
@@ -1944,6 +1944,7 @@ h2 {
 
 .contact-list li:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 
 .contact-list li strong {
