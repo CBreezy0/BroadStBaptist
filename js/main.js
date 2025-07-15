@@ -200,16 +200,31 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     return result;
   }
+  
   function updateCountdown() {
     const countdown = document.getElementById('service-countdown');
     if (!countdown) return;
-    const nextService = getNextSundayAt(11, 0); // 11:00 AM
+    
     const now = new Date();
+    const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const currentHour = now.getHours();
+    
+    // Check if it's Sunday after 11 AM or Monday before noon
+    const showMessagesLink = (currentDay === 0 && currentHour >= 11) || (currentDay === 1 && currentHour < 12);
+    
+    if (showMessagesLink) {
+      countdown.innerHTML = '<a href="messages.html" style="color: var(--yellow); text-decoration: none; font-weight: bold; font-size: 1.1rem;">📖 Listen to Today\'s Message</a>';
+      return;
+    }
+    
+    const nextService = getNextSundayAt(11, 0); // 11:00 AM
     const diff = nextService - now;
+    
     if (diff <= 0) {
       countdown.textContent = 'Service is happening now!';
       return;
     }
+    
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
