@@ -1543,4 +1543,161 @@ h2 {
   }
 }
 
-/* ===== EXISTING CODE CONTINUES ===== */
+/* ============================================================================
+   EVENT CARDS STYLING
+   ============================================================================ */
+
+/* Events grid container */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Individual event card */
+.event-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(52, 22, 57, 0.08);
+  border: 1px solid rgba(52, 22, 57, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(52, 22, 57, 0.15);
+}
+
+/* Event date section */
+.event-date {
+  background: linear-gradient(135deg, var(--purple), #220d29);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-month {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+  color: var(--yellow);
+}
+
+.event-day {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--white);
+}
+
+/* Event details section */
+.event-details {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-details h4 {
+  color: var(--purple);
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.event-details p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.event-details p i {
+  color: var(--yellow);
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+  width: 16px;
+}
+
+.event-details p:last-child {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+/* Upcoming events section */
+.upcoming-events {
+  margin: 3rem 0;
+}
+
+.upcoming-events h3 {
+  color: var(--purple);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.upcoming-events h3:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--yellow);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Mobile responsiveness for events */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .event-card {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .event-details {
+    padding: 1.2rem;
+  }
+  
+  .event-details h4 {
+    font-size: 1.2rem;
+  }
+  
+  .upcoming-events h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-grid {
+    gap: 1rem;
+  }
+  
+  .event-details {
+    padding: 1rem;
+  }
+  
+  .event-details h4 {
+    font-size: 1.1rem;
+  }
+}
