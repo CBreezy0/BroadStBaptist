@@ -63,8 +63,10 @@ CUSTOMIZATION AREAS:
   <section class="section">
     <div class="container">
       <!-- Contact Introduction -->
-      <h2>Contact Information</h2>
-      <p>We'd love to hear from you! Whether you have questions about our church, want to learn more about our ministries, or need prayer support, we're here for you.</p>
+      <div class="welcome-message">
+        <h2>We'd Love to Connect With You!</h2>
+        <p>Whether you have questions about our church, want to learn more about our ministries, need prayer support, or are looking for a church home, we're here for you. Don't hesitate to reach out!</p>
+      </div>
       
       <div class="contact-info">
         <!-- Contact Details Section -->
@@ -80,30 +82,33 @@ CUSTOMIZATION AREAS:
         
         <!-- Service Schedule Section -->
         <div class="service-schedule">
-          <h3>Weekly Service Schedule</h3>
+          <h3>Join Us for Worship</h3>
           <div class="schedule-grid">
             <!-- UPDATE SERVICE TIMES AS NEEDED -->
             <div class="service-item">
               <h4>Sunday School</h4>
               <p class="time">9:30 AM</p>
+              <p>Bible study for all ages</p>
             </div>
             <div class="service-item">
               <h4>Sunday Worship</h4>
               <p class="time">11:00 AM</p>
+              <p>Main worship service</p>
             </div>
             <div class="service-item">
               <h4>Wednesday Bible Study</h4>
               <p class="time">6:00 PM</p>
+              <p>Midweek spiritual growth</p>
             </div>
           </div>
         </div>
       </div>
       
       <div class="additional-info">
-        <h3>Visit Us</h3>
+        <h3>Come Visit Us!</h3>
         <p>We're located in Historic Birmingham, Alabama, and we'd love to welcome you to our church family. Whether you're visiting for the first time or looking for a church home, you'll find a warm welcome at Broad Street Missionary Baptist Church.</p>
         
-        <p>For online services, visit our <a href="connection-card.html">Connection Card</a> page to sign up and receive the Zoom link.</p>
+        <p>For online services and updates, fill out our <a href="connection-card.html">Connection Card</a> to receive service links and church updates.</p>
       </div>
 
       <!-- ============================================================================
@@ -111,8 +116,8 @@ CUSTOMIZATION AREAS:
            ============================================================================ -->
       <!-- Location details for easy reference -->
       <div class="location-section">
-        <h3>Location & Directions</h3>
-        <p>Find us at our physical address for in-person services and events.</p>
+        <h3>Find Us</h3>
+        <p>Located in the heart of Birmingham, we're easy to find and there's parking available for services and events.</p>
         <div class="map-container">
           <!-- Embed Google Map for location -->
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-86.123456789!3d33.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8888abcdef012345%3A0x123456789abcdef0!2sBroad%20Street%20Missionary%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -121,12 +126,12 @@ CUSTOMIZATION AREAS:
       </div>
 
       <!-- ============================================================================
-           ADDITIONAL CONTACT METHODS - Social Media, Forms, etc.
+           SOCIAL MEDIA & CONTACT FORM SECTION
            ============================================================================ -->
       <!-- Add social media links or other ways to connect -->
       <div class="social-media-section">
-        <h3>Connect with Us</h3>
-        <p>Follow us on social media or reach out through our online form.</p>
+        <h3>Stay Connected</h3>
+        <p>Follow us on social media for updates, inspiration, and community news!</p>
         <ul class="social-media-list">
           <!-- UPDATE OR ADD SOCIAL MEDIA ACCOUNTS AS NEEDED -->
           <li><a href="https://www.facebook.com/BroadStreetBaptist" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> Facebook</a></li>
@@ -136,19 +141,23 @@ CUSTOMIZATION AREAS:
         
         <!-- Online Contact Form -->
         <div class="contact-form">
-          <h4>Send us a Message</h4>
+          <h4>✉️ Send Us a Message</h4>
           <form action="https://formspree.io/f/mwkayzgj" method="POST">
             <div class="form-group">
-              <label for="name">Your Name:</label>
-              <input type="text" id="name" name="name" required />
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required />
             </div>
             <div class="form-group">
-              <label for="email">Your Email:</label>
-              <input type="email" id="email" name="email" required />
+              <label for="email">Your Email *</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required />
             </div>
             <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is your message about?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Share your thoughts, questions, or prayer requests..." required></textarea>
             </div>
             <button type="submit" class="btn">Send Message</button>
           </form>
