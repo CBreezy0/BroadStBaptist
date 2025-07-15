@@ -1701,3 +1701,323 @@ h2 {
     font-size: 1.1rem;
   }
 }
+
+/* ============================================================================
+   CONNECTION CARD FORM STYLES
+   ============================================================================ */
+
+/* Welcome message styling */
+.welcome-message {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--purple), #220d29);
+  color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(52, 22, 57, 0.15);
+}
+
+.welcome-message h2 {
+  color: var(--yellow);
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+.welcome-message p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+/* Connection card form container */
+.connection-card-form {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(52, 22, 57, 0.08);
+  border: 1px solid rgba(52, 22, 57, 0.05);
+  margin: 2rem 0;
+}
+
+/* Form sections */
+.form-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.form-section h3 {
+  color: var(--purple);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--yellow);
+  display: inline-block;
+}
+
+/* Form rows and groups */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--purple);
+  font-size: 1rem;
+}
+
+/* Form inputs */
+.connection-form input,
+.connection-form select,
+.connection-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--black);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: inherit;
+}
+
+.connection-form input:focus,
+.connection-form select:focus,
+.connection-form textarea:focus {
+  outline: none;
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 3px rgba(255, 198, 47, 0.2);
+}
+
+.connection-form input::placeholder,
+.connection-form textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.connection-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.connection-form select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* Checkbox grid for ministry interests */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.checkbox-item:hover {
+  background: #e9ecef;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  transform: scale(1.2);
+  accent-color: var(--yellow);
+}
+
+.checkbox-item label {
+  margin: 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--black);
+}
+
+/* Submit button */
+.btn-large {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem auto 0;
+  display: block;
+  background: linear-gradient(135deg, var(--yellow), #e8b625);
+  color: var(--purple);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 198, 47, 0.3);
+}
+
+.btn-large:hover,
+.btn-large:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 198, 47, 0.4);
+  background: linear-gradient(135deg, #e8b625, var(--yellow));
+}
+
+/* Follow-up information section */
+.followup-info {
+  background: var(--gray);
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-top: 3rem;
+  box-shadow: 0 4px 15px rgba(52, 22, 57, 0.05);
+}
+
+.followup-info h3 {
+  color: var(--purple);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.followup-info h4 {
+  color: var(--purple);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.followup-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.followup-info li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.followup-info li:before {
+  content: "✓";
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.followup-info li:last-child {
+  border-bottom: none;
+}
+
+.contact-options {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  border-left: 4px solid var(--yellow);
+}
+
+.contact-methods p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-methods strong {
+  color: var(--purple);
+  min-width: 60px;
+}
+
+.contact-methods a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-methods a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .connection-card-form {
+    padding: 2rem 1.5rem;
+  }
+  
+  .welcome-message {
+    padding: 1.5rem;
+  }
+  
+  .welcome-message h2 {
+    font-size: 1.8rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkbox-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .followup-info {
+    padding: 1.5rem;
+  }
+  
+  .contact-options {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .connection-card-form {
+    padding: 1.5rem 1rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .btn-large {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+}
