@@ -1214,7 +1214,7 @@ h2 {
 .pastor-content {
   display: flex;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .pastor-photo {
