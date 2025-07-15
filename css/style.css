@@ -1219,7 +1219,7 @@ h2 {
 
 .pastor-photo {
   flex-shrink: 0;
-  width: 200px;
+  width: 120px;
 }
 
 .pastor-image {
@@ -1242,7 +1242,7 @@ h2 {
   }
   
   .pastor-photo {
-    width: 150px;
+    width: 100px;
     margin: 0 auto 1rem auto;
   }
 }
@@ -1260,7 +1260,7 @@ h2 {
 
 .pastor-photo-leadership {
   flex-shrink: 0;
-  width: 250px;
+  width: 150px;
 }
 
 .pastor-image-leadership {
@@ -1291,7 +1291,7 @@ h2 {
   }
   
   .pastor-photo-leadership {
-    width: 200px;
+    width: 120px;
     margin: 0 auto;
   }
 }
